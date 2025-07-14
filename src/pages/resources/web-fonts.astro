@@ -1,0 +1,101 @@
+---
+const title = "Web Fonts";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title={title}>
+  <p>
+    Fonts on the web behave differently than fonts in print files. While a
+    printed document may use a proprietary font, there's no threat of
+    distributing the licensed font files with a publication--no one can download
+    a font file from say, a physical poster or book, and the font files used in
+    a layout remain on the designer's computer.
+  </p>
+  <p>
+    With the web, websites rely upon references to actual font files to render
+    fonts properly, and if the font files aren't present, a website will defer
+    to what is installed on the user's computer. There are also different font
+    formats used with the web (see this article on
+    <a href="https://www.w3schools.com/css/css3_fonts.asp"
+      >font file formats on W3Schools</a
+    >).
+  </p>
+  <p>
+    There are a number of
+    <a href="https://www.w3schools.com/cssref/css_websafe_fonts.asp"
+      >system fonts</a
+    >
+    that can be relied upon, however, adding custom fonts makes your design more
+    memorable and unique. There are several font foundries and services like Adobe's
+    <a href="https://typekit.com/">TypeKit</a>,
+    <a href="https://www.fonts.com/">Fonts.com</a>, and
+    <a href="https://www.typography.com/">Typography.com</a> that permit you to license
+    fonts for web use. These typically charge a subscription fee per font variant
+    and/or based on your website traffic (as they incur traffic for the font files
+    hosted on their site but used in yours).
+  </p>
+
+  <h2>To use:</h2>
+  <ul>
+    <li>
+      <a
+        href="https://developers.google.com/fonts/docs/getting_started"
+        target="_blank">Get Started with the Google Fonts API</a
+      >
+    </li>
+    <li>
+      <a href="https://helpx.adobe.com/fonts/using/add-fonts-website.html"
+        >Adobe Fonts: Add fonts to your website</a
+      >
+    </li>
+    <li><a href="https://fonts.bunny.net">Bunny Fonts</a></li>
+    <li>
+      <a href="https://gwfh.mranftl.com/fonts"
+        >google-webfonts-helper (for self-hosting)</a
+      >
+    </li>
+    <li><a href="https://fontsource.org/">FontSource</a></li>
+  </ul>
+
+  <aside>
+    <p><strong>A few tips:</strong></p>
+    <ol>
+      <li>
+        Don't use too many fonts and variants in one design. Each font variant
+        or family, even if unused, will increase the size of your site.
+      </li>
+      <li>
+        For a display font (headlines, etc.) one font variant may suffice, but
+        for a body font, make sure that the font you choose has adequate
+        variants and characters. For instance, your body copy should likely
+        contain:
+        <ul>
+          <li>Regular</li>
+          <li><i>Italic</i></li>
+          <li><b>Bold</b></li>
+          <li><b><i>Bold Italic</i></b></li>
+        </ul>
+      </li>
+      <li>
+        While Google Fonts will remind you that you can use the font(s) without
+        downloading them, you'll likely want to use them in your design
+        software.
+      </li>
+      <li>
+        I recommend organizing your web fonts using font software. Create a new
+        group or collection of Google Fonts you have downloaded, as this will
+        remind you which can be used freely in your web designs.
+      </li>
+      <li>
+        While Google Fonts has a great collection, it doesn't have everything.
+        You may find the font you want on another site, such as
+        <a href="https://www.dafont.com/">dafont.com</a>. If the author hasn't
+        prepared fonts for web (but the font license gives you rights to use it)
+        you can use conversion tools like
+        <a href="https://www.fontsquirrel.com/tools/webfont-generator"
+          >Font Squirrel</a
+        >.
+      </li>
+    </ol>
+  </aside>
+</Layout>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Responsive Nav Example</title>
+  <style>
+    #primary-nav{
+      overflow: hidden; /* Overflow hidden ensures that navigation can be hidden */
+      background-color: #ccc;
+      transition: max-height 2s ease-out;
+    }
+    #primary-nav ul{
+      margin: 0;
+      padding: 0;
+    }
+    #primary-nav li{
+      list-style: none;
+      display: inline-block;
+    }
+    #toggle-nav{
+      display: none;
+    }
+    /* This media query defines how the page displays beneath a breakpoint */
+    @media (max-width: 767px){
+      #toggle-nav{
+        display: block; /* display button beneath breakpoint */
+      }
+      #primary-nav{
+        max-height: 0;
+      }
+      #primary-nav li{
+        display: block;
+      }
+      /* Here, we override the rule when the body has a class of nav-open */
+      body.nav-open #primary-nav{
+        max-height: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button id="toggle-nav">&#9776;</button>
+  <nav id="primary-nav">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <div>
+    <p>This basic example shows one approach to how a responsive nav can work using CSS an minimal JavaScript. When triggered by a button, JavaScript will append a class to the body tag, and we define a style that sets a different max-height on the navigation.</p>
+    <p>We use the max-height property because we can't animate the height property unless we know the exact height values.</p>
+  </div>
+  <script>
+  // Perform this after the window has loaded
+  window.onload = function() {
+    // First, tell JavaScript to remember which DOM element (in this case, a button) to reference (by id)
+    let toggleNav = document.getElementById('toggle-nav');
+
+    // Tell button to do something on click
+    toggleNav.addEventListener('click', function(){
+
+      // toggle the body's class attribute
+      document.body.classList.toggle('nav-open');
+
+    });
+  };
+  </script>
+</body>
+</html>

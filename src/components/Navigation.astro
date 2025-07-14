@@ -1,0 +1,38 @@
+<nav id="primary-nav">
+  <div id="inner-nav">
+    <ul>
+      <li><a href="/">Syllabus</a></li>
+      <li><a href="/schedule">Schedule</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/exercises">Exercises</a></li>
+      <li>
+        Resources
+        <ul>
+          <li><a href="/resources/sitemap/">Sitemap</a></li>
+          <li><a href="/resources/wireframes/">Wireframes</a></li>
+          <li><a href="/resources/images-icons/">Stock Images and Icons</a></li>
+          <li><a href="/resources/web-fonts/">Web Fonts</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+<style>
+  #primary-nav {
+    transition: var(--transition);
+    top: var(--headerHeight);
+    width: 300px;
+    background-color: var(--lightGray);
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 10;
+    height: 100%;
+    @media (max-width: 767px) {
+      width: 0;
+    }
+  }
+  #inner-nav {
+    padding: 2em 2em 8em 2em;
+  }
+</style>

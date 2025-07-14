@@ -1,0 +1,100 @@
+  :root {
+    --red: #912834;
+    --lightRed: #f7a8b0;
+    --blue: #3081f2;
+    --headertextcolor: #353843;
+    --textColor: #707070;
+    --bgcolor: #353843;
+    --lightGray: #f9f9fa;
+    --borderColor: #dcdee6;
+    --basePadding: 1em;
+    --headerHeight: 120px;
+    --transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+    /*color: var(--textColor);*/
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .row {
+    display: flex;
+  }
+  aside{
+	display: block;
+	padding: 1em;
+	background-color: rgb(255, 253, 232);
+}
+.links{
+	display: block;
+	margin: 1em 0;
+	padding: 1em;
+	background-color: rgb(224, 238, 240);
+}
+a {
+  color: var(--blue);
+  transition: var(--transition);
+  text-decoration: none;
+}
+img {
+  border: 1px solid var(--borderColor);
+  max-width: 100%;
+  height: auto;
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--borderColor);
+  margin: 2em 0;
+}
+section {
+  padding-bottom: var(--basePadding);
+  border-top: 1px solid var(--borderColor);
+}
+aside {
+  h2,
+  h3 {
+    margin-top: 0;
+  }
+  margin: var(--basePadding) auto;
+  padding: var(--basePadding);
+  background-color: var(--lightGray);
+}
+figure {
+  margin: 0;
+}
+table {
+  width: 100%;
+  border-spacing: 0;
+  border: 0.5px solid var(--borderColor);
+}
+th {
+  text-align: left;
+  color: #fff;
+  background-color: var(--bgcolor);
+}
+td,
+th {
+  font-size: 14px;
+  border: 0.5px solid var(--borderColor);
+  padding: 2px 4px;
+  vertical-align: top;
+  ul {
+    margin-top: 0;
+  }
+  p,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Off-Canvas Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        main{
+            width: 100%;
+        }
+        .nav-toggle{display: none;}
+        #site-canvas {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          position: relative;
+          transform: translateX(0);
+          transform: translate3d(0, 0, 0);
+          transition: 300ms ease all;
+          backface-visibility: hidden;
+          background-color: #ddd;
+        }
+        #content{
+            background-color: #999;
+            width: calc(100% - 300px);
+        }
+        #site-panel {
+          width: 300px;
+          position: relative;
+          background: #ccc;
+        }
+
+        @media (max-width: 767px) {
+            .nav-toggle{display: block;}
+            .show-nav #site-canvas {
+              transform: translateX(300px);
+              transform: translate3d(300px, 0, 0);
+            }
+            #content{
+                width: 100%;
+            }
+            #site-panel {
+              position: absolute;
+              top: 0;
+              left: -300px;
+            }
+            #site-panel .nav-toggle{
+                position: absolute;
+                right: 1em;
+                top: 1em;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <a class="nav-toggle" href="#">&#9776; MENU</a>
+
+    <main>
+        <div id="site-canvas">
+            <div id="site-panel">
+               <a class="nav-toggle" href="#">X</a>
+                <p>Panel</p>
+            </div>
+
+            <div id="content">
+                <p>Content</p>
+            </div>
+        </div>
+    </main>
+
+
+   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+   <script>
+      $('.nav-toggle').click(function() {
+        $('body').toggleClass('show-nav');
+    });
+    </script>
+</body>
+</html>

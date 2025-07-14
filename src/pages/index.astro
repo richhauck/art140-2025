@@ -1,12 +1,619 @@
 ---
-import Welcome from "../components/Welcome.astro";
+const title = "Syllabus";
 import Layout from "../layouts/Layout.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-  <Welcome />
-  <a href="/schedule">Schedule</a>
+<Layout title={title}>
+  <table>
+    <tbody>
+      <tr>
+        <td>Credit Hours:</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>CRN:</td>
+        <td>202520</td>
+      </tr>
+      <tr>
+        <td>Prerequisites:</td>
+        <td>ART 109, 143, and 144 with a grade of C or better</td>
+      </tr>
+      <tr>
+        <td>Co-requisites:</td>
+        <td>ART 149, 145</td>
+      </tr>
+      <tr>
+        <td>Campus:</td>
+        <td>Harrisburg</td>
+      </tr>
+      <tr>
+        <td>Meeting time:</td>
+        <td>Mondays and Wednesdays 5:30pm to 7:50pm</td>
+      </tr>
+      <tr>
+        <td>Meeting location:</td>
+        <td>Online over Zoom</td>
+      </tr>
+      <tr>
+        <td>Department Name:</td>
+        <td>Communication, Humanities and Arts</td>
+      </tr>
+      <tr>
+        <td>Class Day &amp; Time:</td>
+        <td>Mondays and Wednesdays 5:30pm – 7:50pm </td>
+      </tr>
+      <tr>
+        <td>Office Hours:</td>
+        <td>7:50pm - 8:50pm Mondays and Wednesdays or by appointment</td>
+      </tr>
+      <tr>
+        <td>Meeting Location:</td>
+        <td>Online over Zoom</td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td>
+          <a href="mailto:rdhauck@hacc.edu">rdhauck@hacc.edu</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>Catalog Description</h2>
+  <p>
+    Introduces functions of the World Wide Web and the fundamentals of creating
+    mobile and desktop sites. Students utilize contemporary web technology and
+    standards to develop creative and functional websites. This course
+    emphasizes web fundamentals and application through using a web design
+    software package. Enrollment is restricted to students in the Graphic and
+    Interactive Design AAS program. A course fee is required.
+  </p>
+  <h2>Learning Outcomes</h2>
+  <p>Upon successful completion of the course the student will be able to:</p>
+  <ul>
+    <li>Plan, design, build, and maintain web and mobile site/s</li>
+    <li>
+      Utilize the creative and design workflow process that occurs behind the
+      marketing strategy, design, and production for the World Wide Web
+    </li>
+    <li>
+      Create well-designed web and mobile sites that are both functional and
+      practical with an emphasis on user experience, accessibility, web
+      standards, and search engine optimization
+    </li>
+    <li>
+      Analyze personal, peer, and published web and mobile sites and evaluate
+      their effectiveness, weaknesses and strengths
+    </li>
+  </ul>
+  <h2>Planned Sequence of Instruction</h2>
+  <ul>
+    <li>Understanding the web design process and designing for the web.</li>
+    <li>
+      Gain a better understanding of how the web works and how technology
+      iterates and advances.
+    </li>
+    <li>Design for the web and the end user.</li>
+    <li>Understanding HyperText Markup Language (HTML) coding.</li>
+    <li>Strong understanding of web image optimization and file formats.</li>
+    <li>Basics of web image optimization and formats.</li>
+    <li>Use of templates for efficient web development.</li>
+    <li>
+      Understanding and use of the web design process including research,
+      sketching, wire framing, comprehensive layouts, and coding.
+    </li>
+    <li>
+      Focus on writing semantic markup (code) and understanding of the role that
+      scripting languages play on the open web.
+    </li>
+    <li>Cascading Style Sheets (CSS) for representation.</li>
+    <li>Maintain a website</li>
+    <li>
+      Introduction to deployment and file transport methods required in a
+      website.
+    </li>
+  </ul>
+  <h2>Textbook and Materials</h2>
+  <p>Reading assignments will be provided in class and published on D2L.</p>
+  <strong>Recommended Resources</strong>
+  <ul>
+    <li>
+      <a href="https://www.w3schools.com/">https://www.w3schools.com/</a>
+    </li>
+    <li>
+      <a href="https://css-tricks.com/">https://css-tricks.com/</a>
+    </li>
+    <li>
+      <a href="https://developer.mozilla.org/en-US/"
+        >https://developer.mozilla.org/en-US/</a
+      >
+    </li>
+  </ul>
+  <strong>Supply List:</strong>
+  <ul>
+    <li>Webcam with Internet Access</li>
+    <li>Adobe Creative Cloud subscription</li>
+    <li>
+      Figma (free license upon verification
+      <a href="https://www.figma.com/education/students/"
+        >https://www.figma.com/education/students/</a
+      >)
+    </li>
+    <li>
+      Visual Studio Code
+      <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a
+      >
+    </li>
+    <ul>
+      <li>
+        Live Server plugin
+        <a
+          href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer"
+        >
+          https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer</a
+        >
+      </li>
+      <li>
+        Prettier plugin: <a
+          href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+          >https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode</a
+        >
+      </li>
+    </ul>
+    <li>
+      GitHub account (Free account)
+      <a href="https://github.com/">https://github.com/</a>
+      <ul>
+        <li>
+          GitHub Desktop - <a href="https://desktop.github.com/download/"
+            >https://desktop.github.com/download/</a
+          >
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <h2>Equipment and Technology Requirements</h2>
+  <p>
+    HACC Technology Loan program allows students to borrow computers and other
+    equipment necessary for classes. We are allowing students in this class to
+    borrow iMacs and keep it for the entire semester. You must complete and
+    submit the form at:
+    <a href="https://libguides.hacc.edu/pcloan/about"
+      >https://libguides.hacc.edu/pcloan/about</a
+    >
+    if interested. HACC Learning Commons will make arrangements for you to pick up
+    the iMac during one of HACC's Technology Pickup days.
+    <br />
+    <h2>Assignments</h2>
+    <p>
+      The total possible points score in this course is 1,000 and is broken down
+      as follows:
+    </p>
+  </p>
+  <strong>Projects:</strong>
+  <ul>
+    <li>Central PA tourism page (180 points)</li>
+    <li>Instructional site (200 points)</li>
+    <li>Book promotion site (220 points)</li>
+    <li>Small business site (240 points)</li>
+  </ul>
+  <strong>Exercises:</strong>
+  <br />
+  Each exercise is worth a total of 20 points. Some will be completed in class, while
+  others will be assigned as homework.<br />
+  <ol>
+    <li>Personal splash page posted to GitHub (8/28)</li>
+    <li>CSS Box model exercise (9/9)</li>
+    <li>Multi-column page layout (9/11)</li>
+    <li>Gallery layout (9/18)</li>
+    <li>Responsive page layout (10/7)</li>
+    <li>Responsive page layout using a framework (10/30)</li>
+  </ol>
+
+  <strong>Participation:</strong>
+  attendance and participation in class discussion and critiques (60 points)
+
+  <h3>Grading Procedures</h3>
+  <ul>
+    <li>Research, sketches and wireframes</li>
+    <li>Design, revisions, creativity</li>
+    <li>Meeting development requirements</li>
+    <li>Participation</li>
+    <li>Attendance</li>
+  </ul>
+  <p>
+    All projects and assignments are due on the assigned deadline, at the
+    beginning of class. For each class period an assignment is late its value
+    will be dropped by one letter grade.
+  </p>
+  <p>
+    A (Superior work with consistent advancement) = 100 - 90 pt<br />
+    B (above average which fulfills the requirements) = 89 - 80 pt<br />
+    C (average work which fulfills minimum requirements) = 79 - 70 pt<br />
+    D (below average passing grade, poor work) = 69 - 60 pt<br />
+    F (Unacceptable work, failure) = 59 - 0 pt
+  </p>
+  <p>
+    &quot;I&quot; (Upon recommendation of the student and with the approval of
+    the instructor, the &quot;I&quot; (incomplete) grade may be applied. The
+    &quot;I&quot; grade shows that coursework is incomplete and must be
+    completed within eight weeks of the ensuing fall or spring semester. On the
+    recommendation of the instructor and subject to the division administrator's
+    approval, the eight-week period may be extended. An incomplete grade is
+    computed as an F in the student's cumulative grade point average when not
+    completed within the allotted period.
+  </p>
+  <h3>Incomplete Grade Policy</h3>
+  A grade of Incomplete (I) may be assigned when a student is not able to complete
+  the course requirements due to extenuating circumstances. The Incomplete grade
+  will be assigned only after a conference with the instructor and his/her determination
+  of a serious need. The &ldquo;I&rdquo; becomes an &ldquo;F&rdquo; if the work is
+  not completed before 8 weeks into the following semester. The grade of incomplete
+  is only granted if a student has a serious, documented health problem that precludes
+  completing the required work.
+  <h3>Make-up Work</h3>
+  For each class period a project is late its value will be dropped by one letter
+  grade.
+  <p>
+    Excluding the final project, one major project may be resubmitted during the
+    course of the semester. Projects eligible for resubmission must have been
+    turned in on time and earned a grade of &quot;C&quot; or lower. Resubmission
+    project must be turned in, with instructor&rsquo;s consultation within two
+    weeks from the date the project was first graded and handed back to the
+    students. Resubmissions must be accompanied with the original project in
+    order to be graded. This does not guarantee that the earned grade will be
+    adjusted to a higher grade. Resubmission will not be accepted during the
+    last week of classes. Make-up is not allowed for class exercises.<strong>
+      <em> <br /></em>
+    </strong>
+    <br />
+    <h2>Attendance and Withdrawal</h2>
+    Students are expected to attend every class and remain in class for the duration
+    of the session. Failure to attend class or arriving late may impact your ability
+    to achieve course objectives, which could affect your course grade. An absence,
+    excused or unexcused, does not relieve a student of any course requirement. Regular
+    class attendance is a student&rsquo;s obligation, as is a responsibility for
+    all the work of class meetings. Please arrive to class on time.
+  </p>
+  <p>
+    Excessive absences are when unexcused absences or the failure to participate
+    in academic activities exceed 15% of the total class hours that will take
+    place throughout the semester and when the absences preclude the possibility
+    of the student attaining the stated learning outcomes for the course.
+  </p>
+  <p>
+    If a student meets the requirements for excessive absences, on the 3rd
+    absence, the instructor will drop the student from the course with a grade
+    of &ldquo;W&rdquo; unless academic dishonesty was documented. An excused
+    absence is an absence that occurred for reasons that were: a) beyond the
+    student&rsquo;s control to prevent, and b) significant enough to reasonably
+    prohibit attendance in class. For an absence to be considered excused, the
+    student must contact the instructor and provide evidence supporting the
+    excuse for the absence. The following are examples of excused absences (with
+    required documentation):
+  </p>
+  <ul>
+    <li>
+      Illness - medical documentation required indicating that you cannot return
+      to classes (note from doctor, emergency room verification, etc.)
+    </li>
+    <li>
+      Funeral for immediate family and grandparents– funeral program, obituary
+      notice
+    </li>
+    <li>
+      Jury Duty – must bring in documentation of jury service or jury summons
+      form.
+    </li>
+    <li>
+      Mandatory Court Appearance – must bring in a copy of court papers clearly
+      stating date of appearance.
+    </li>
+    <li>Military Service</li>
+    <li>Auto Accident - documentation required</li>
+  </ul>
+  <p>
+    An unexcused absence is an absence that is not excused. The following are
+    examples of unexcused absences:
+  </p>
+  <ul>
+    <li>Other School related events</li>
+    <li>Childcare</li>
+    <li>Auto Problems</li>
+    <li>Work-related Obligations</li>
+    <li>Illness (ie: common cold, flu) without doctor's excuse</li>
+    <li>Elective surgeries</li>
+    <li>Incarceration</li>
+  </ul>
+  <p>
+    Attendance will be taken at the start of each class. If you arrive late,
+    it&rsquo;s your responsibility to let me know that you&rsquo;re in class.
+    Otherwise you will be marked absent. (A total of two late arrival or early
+    leave markings will count as one absence).
+  </p>
+  <p>
+    For specific refund dates, use this link:
+    <a
+      href="https://www.hacc.edu/Students/RegisterOnlineGuide/add-and-drop-deadlines.cfm"
+    >
+      https://www.hacc.edu/Students/RegisterOnlineGuide/add-and-drop-deadlines.cfm</a
+    >
+  </p>
+  <h3>Remote Classroom</h3>
+  Unless otherwise stated in class, handouts will be posted to D2L.
+
+  <p>
+    You will also be submitting your assignments by publishing them to your
+    website. Assignments should be uploaded to your site before the start of
+    class on the assignment&rsquo;s due date, as this will ensure files have
+    uploaded in time for a critique.<br />
+    <br />
+    When possible, students should participate in screen sharing, as this helps to
+    ensure participation and attendance. If Internet performance is a factor or if
+    you need to step away from your desk, etc., feel free to turn off your webcam.
+  </p>
+  <p>
+    Unless speaking, please mute your microphone (unless it&rsquo;s a
+    discussion!). There may be times in class where you will be asked to present
+    your work via screenshare and/or participate in exercises while on Zoom. If
+    you have any technical concerns please don&rsquo;t hesitate to reach out to
+    me.
+  </p>
+  <p>
+    Use of your webcam is not required by highly encouraged. Learning is a
+    social activity. Remote learning can be challenging because it creates a
+    barrier to the social element of our experience. One way for us to build
+    community and social connection in the remote setting is to engage our
+    cameras during our class meeting times. Student engagement dramatically
+    affects student success. We&rsquo;ll take more time to discuss our community
+    norms for our work together, but in the meantime, if you have concerns about
+    privacy issues in your learning space, consider using a Zoom background (the
+    one you created last semester) or placing a piece of fabric behind you. If
+    you have other concerns about turning your camera on, please reach out to
+    me. Your success is my top priority, and I want to be certain that you have
+    the tools that support your learning.
+    <br />
+    <br />
+    Engaging our cameras are especially important during critiques and class presentations.
+    During critiques we are not only listening to your words and critiquing your
+    artwork; but are assessing your presentation skills. Seeing you will encourage
+    real conversations and interaction with the instructor and your peers. In fact,
+    visual connection builds trust and confidence and can minimize misunderstandings
+    and confusions.
+  </p>
+  <h2>Academic Dishonesty</h2>
+  <p>
+    Academic honesty is one of the fundamental principles upon which the College
+    was founded and upon which it must operate to continue to perform its most
+    important function. Students are expected to be honest in all of their
+    academic endeavors. The College views academic dishonesty as a serious
+    breach of conduct. Depending upon the nature and severity of the dishonest
+    act, the faculty and the College may discipline a student for verifiable
+    acts of dishonesty occurring in or out of the classroom. In short
+    &ldquo;Academic dishonesty is defined as an intentional act of deception in
+    which a student seeks to claim credit for the work or effort of another
+    person, or uses unauthorized material or fabricated information in any
+    academic work.&rdquo; It includes, but is not limited to:
+  </p>
+  <ul>
+    <li>
+      Cheating - giving or receiving answers on assigned material; using
+      materials or aids forbidden by the instructor, unauthorized possession of
+      examination
+    </li>
+    <li>
+      Plagiarism - offering someone else&rsquo;s work, words, or ideas as
+      one&rsquo;s own or using material from another source without
+      acknowledgement.
+    </li>
+    <li>
+      Interference - interfering without permission with the work of another
+      student either by obtaining, changing, or destroying the work of another
+      student
+    </li>
+    <li>
+      Buying or selling of term papers, homework, examinations, laboratory
+      assignments, computer programs, etc.
+    </li>
+    <li>Falsifying of one&rsquo;s own or another&rsquo;s records</li>
+    <li>Knowingly assisting someone who engages in above activities.</li>
+  </ul>
+  <p>
+    Plagiarism and cheating are unacceptable and will result in a zero for
+    class. Plagiarism in the visual arts is unauthorized copying or reproduction
+    of any photograph or work of art or design created by another individual
+    with the intent to represent it as your own work.
+  </p>
+  <p>Plagiarized work is a recognizable interpretation of the original work.</p>
+  <p>
+    Other penalties for students found to have committed academic dishonesty
+    include, but may not be limited to, the following:
+  </p>
+  <ul>
+    <li>Lowering of a grade or failure for a particular assignment.</li>
+    <li>Lowering of a grade, failure, and/or dismissal from the course.</li>
+    <li>
+      Disciplinary probation-may include a limitation on credits, mandatory
+      repeat of a course.
+    </li>
+    <li>Suspension from a curriculum.</li>
+    <li>Suspension from the College</li>
+  </ul>
+  <p>
+    Academic Dishonesty will be documented in the student's file. If the student
+    drops the course and has engaged in academic dishonesty, the instructor will
+    request the grade be an “F.” Most contemporary artwork is copyrighted. A
+    typed name or signature defines copyright. Artwork on websites is
+    copyrighted. When in doubt, don't use it. Draw from you own photo reference,
+    from life, and from your imagination. All artwork should be original! If
+    still in doubt about how to use visual reference, do not hesitate to ask
+    your instructor for help.<br />
+  </p>
+  <h2>Mental Health Counseling Services</h2>
+  <p>
+    Starting in Fall 2019 and continuing this semester HACC has entered into a
+    contract with Mazzitti &amp; Sullivan EAP Services to provide mental health
+    counseling services to our students. Mazzitti &amp; Sullivan has over 3,000
+    providers nationwide who are able to assist individuals in need of mental
+    health or drug/alcohol counseling. Sessions may be face-to-face, by
+    telephone, or through a secure online platform. Interested students are
+    encouraged to contact Mazzitti &amp; Sullivan EAP Services at 1-800-543-5080
+    or through its website,
+    <a href="http://www.mseap.com">www.mseap.com</a>.
+    <br />
+    <a
+      href="https://www.hacc.edu/Students/AdvisingCounseling/CounselingContacts/wellness-resources.cfm"
+    >
+      https://www.hacc.edu/Students/AdvisingCounseling/CounselingContacts/wellness-resources.cfm</a
+    >
+    <br />
+    <br />
+    <p>
+      <strong
+        >HACC's Consultation, Advocacy, Referrals and Empowerment (CARE) Center</strong
+      >
+      <br />
+      <a href="https://www.hacc.edu/Students/CARECenter/index.cfm"
+        >https://www.hacc.edu/Students/CARECenter/index.cfm</a
+      >
+    </p>
+    <strong>Diversity and Inclusion</strong>
+    <p>
+      We must treat every individual with respect. We are diverse in many ways,
+      and this diversity is fundamental to building and maintaining an equitable
+      and inclusive campus community. Diversity can refer to multiple ways that
+      we identify ourselves, including but not limited to race, color, national
+      origin, language, sex, disability, age, sexual orientation, gender
+      identity, religion, creed, ancestry, belief, veteran status, or genetic
+      information. Each of these diverse identities, along with many others not
+      mentioned here, shape the perspectives our students, faculty, and staff
+      bring to our campus. We, at HACC, will work to promote diversity, equity
+      and inclusion not only because diversity fuels excellence and innovation,
+      but because we want to pursue justice. We acknowledge our imperfections
+      while we also fully commit to the work, inside and outside of our
+      classrooms, of building and sustaining a campus community that
+      increasingly embraces these core values.
+    </p>
+    <strong>Students in Need of Accommodations:</strong>
+    <p>
+      Harrisburg Area Community College is committed to providing reasonable
+      accommodations to qualified students with disabilities to ensure that they
+      have an equal opportunity to succeed and participate in their college and
+      career goals. The College in accordance with federal compliance of the
+      Americans with Disabilities Act as Amended (ADAAA), Sections 504/508 of
+      the Rehabilitation Act of 1973 and Title IX of the Education Amendment of
+      1972. Title IX provides protection for students who are pregnant,
+      parenting and may need to take a medical leave of absence due to
+      pregnancy, childbirth, miscarriage, abortion and or recovery.
+    </p>
+    <p>
+      The Student Access Services Department, ensures no qualified person will
+      be denied access to, participation in, or the benefits of, any program or
+      activity operated by the college because of disability, pregnancy, or
+      related conditions. Nor will individuals with a disability be subjected to
+      discrimination while participating in college programs or activities due
+      to disability. Whether students had an IEP in high school or not, they may
+      be eligible for accommodations. Student Access Services encourage students
+      who feel they may benefit from accommodations to contact us to learn more
+      and review our webpage at: www.hacc.edu/Students/DisabilityServices.
+      Student Access Coordinator contact and location information is available
+      at:
+      <a
+        href="http://www.hacc.edu/Students/DisabilityServices/Contact-Disability-Services.cfm"
+      >
+        http://www.hacc.edu/Students/DisabilityServices/Contact-Disability-Services.cfm</a
+      >
+    </p>
+    <h2>EEOC POLICY 005:</h2>
+    <p>
+      It is the policy of Harrisburg Area Community College, in full accordance
+      with the law, not to discriminate in employment, student admissions,
+      student access and/or student services on the basis of race, color,
+      religion, age, political affiliation or belief, gender, national origin,
+      ancestry, disability, place of birth, General Education Development
+      Certification (GED), marital status, sexual orientation, gender identity
+      or expression, veteran status, genetic history/information, or any legally
+      protected classification. HACC recognizes its responsibility to promote
+      the principles of equal opportunity for employment, student admissions,
+      and student services taking active steps to recruit minorities and women.
+    </p>
+    <p>
+      The Pennsylvania Human Relations Act (“PHRAct”) prohibits discrimination
+      against prospective and current students because of race, color, sex,
+      religious creed, ancestry, national origin, handicap or disability, record
+      of a handicap or disability, perceived handicap or disability,
+      relationship or association with an individual with a handicap or
+      disability, use of a guide or support animal, and/or handling or training
+      of support or guide animals.
+    </p>
+    <p>
+      The Pennsylvania Fair Educational Opportunities Act (“PFEOAct”) prohibits
+      discrimination against prospective and current students because of race,
+      religion, color, ancestry, national origin, sex, handicap or disability,
+      record of a handicap or disability, perceived handicap or disability, and
+      a relationship or association with an individual with a handicap or
+      disability.
+    </p>
+    <p>
+      Information about these laws may be obtained by visiting the Pennsylvania
+      Human Relations Commission website at
+      <a href="http://www.phrc.pa.gov/Pages/default.aspx#.V2HOujFuNS0"
+        >http://www.phrc.pa.gov/Pages/default.aspx#.V2HOujFuNS0</a
+      >.<br />
+      <br />
+      <p>
+        <strong>
+          <u>HACC—Gettysburg Campus</u>
+        </strong>
+        <br />
+        Erin Rose, Coordinator, Student Access Services<br />
+        G127B<br />
+        Phone: 717-339-3533<br />
+        Fax: 717-337-3015<br />
+        Email: elrose@hacc.edu
+      </p>
+      <p>
+        <strong>
+          <u>HACC—Harrisburg Campus and Virtual</u>
+        </strong>
+        <br />
+        Carole Kerper, Coordinator, Student Access Services<br />
+        C133D<br />
+        Phone: 717-780-2614<br />
+        Fax: 717-780-1165<br />
+        Email: clkerper@hacc.edu
+      </p>
+      <p>
+        <strong>
+          <u>HACC—Lancaster Campus</u>
+        </strong>
+        <br />
+        Martin Sica, Coordinator, Student Access Services<br />
+        RM 221D<br />
+        Phone: 717-358- 2273<br />
+        Fax: 717-358-2951<br />
+        Email: masica@hacc.edu
+      </p>
+      <p>
+        <strong>
+          <u>HACC—York Campus</u>
+        </strong>
+        <br />
+        Anessa Deppen, Coordinator, Student Access Services<br />
+        YL102J<br />
+        Phone: 717-801-3276<br />
+        Fax: 717-718-7252<br />
+        Email: addeppen@hacc.edu
+      </p>
+      <p>
+        <strong>
+          <u>HACC—Lebanon Campus</u>
+        </strong>
+        <br />
+        Deborah Bybee, Coordinator, Student Access Services<br />
+        Lebanon 316A<br />
+        Phone: 717-270-6333<br />
+        Email: dabybee@hacc.edu
+      </p>
+    </p>
+  </p>
 </Layout>

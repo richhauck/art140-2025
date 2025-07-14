@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Picture Tag Example</title>
+</head>
+<body>
+  <picture>
+   <source media="(min-width: 800px)" srcset="{{ "/images/lessons/flowers-800.jpg" | url }}">
+   <source media="(min-width: 600px)" srcset="{{ "/images/lessons/flowers-600.jpg" | url }}">
+   <source srcset="{{ "/images/lessons/flowers-320.jpg" | url }}">
+   <img srcset="{{ "/images/lessons/flowers.jpg" | url }}" alt="This picture loads on non-supporting browsers.">
+  </picture>
+  <p>Scale your browser width to see different images display.</p>
+</body>
+</html>

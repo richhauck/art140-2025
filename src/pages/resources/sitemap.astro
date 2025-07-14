@@ -1,0 +1,74 @@
+---
+const title = "Sitemap";
+import Layout from "../../layouts/Layout.astro";
+import sitemap from "../../assets/sitemap.png";
+---
+
+<Layout title={title}>
+  <p>
+    A sitemap is the blueprint to the website or application you are designing.
+    It should be the starting point of any project, as your design's role should
+    be framed around content and assisting in making content as easy to access
+    as possible. After all, you can't design an interface without knowing the
+    number of menus or the number of links required on each page.
+  </p>
+
+  <p>
+    From a business standpoint, developing a sitemap forces your client to
+    consider how their content is organized and, in some cases, exposes how the
+    project's scheduling will play out. During this phase, SEO could play a part
+    in the naming conventions of certain sections.
+  </p>
+
+  <p><em>Here's a rough example of what a sitemap could look like:</em></p>
+
+  <img src={sitemap.src} alt="sample sitemap" />
+  <br />
+  <p>
+    Plenty more examples can be found by doing a Google image search for
+    "sitemap". It's important to develop your own boilerplate for this, but
+    here's a few tips:
+  </p>
+  <ul>
+    <li>
+      Keep it visually simple. Don't add lots of colors or shapes, but if you
+      must, ensure there's a legend or key available to easily identify what's
+      going on.
+    </li>
+    <li>
+      Add relevant data such as version number, date, the name of who created
+      the document, the client, etc.
+    </li>
+    <li>
+      Trees should clearly identify the parent-child relationship, and consider
+      using a layered icon (see &quot;Archive&quot;, above) where lots of pages
+      will be housed.
+    </li>
+  </ul>
+
+  <section class="links">
+    <h3>Links:</h3>
+    <p>
+      <a href="https://slickplan.com/blog/site-mapping-a-comprehensive-guide"
+        >Site Mapping How To: What Website Page Mapping Is & Why You Need It</a
+      >
+    </p>
+    <ul>
+      <a
+        href="https://webdesign.tutsplus.com/articles/how-to-architect-a-better-site-map--webdesign-14180"
+        >How to Architect a Better Site-Map</a
+      >
+      <li>
+        <a
+          href="https://www.figma.com/community/plugin/1004954729018393690/visual-sitemap"
+          >Figma - Visual Sitemap</a
+        >
+      </li>
+      <li>
+        <a href="https://www.figma.com/community/file/1000205564789157468"
+          >Figma Sitemap Generator</a
+        >
+      </li>
+    </ul>
+  </section>
+</Layout>

@@ -1,0 +1,73 @@
+---
+layout: default.njk
+title: Responsive Navigation
+---
+  <section>
+    <p>Here's a very simple example where JavaScript is used to toggle the body.class attribute, which in-turn determines how the menu displays.</p>
+    <a class="button" href="{{"/resources/responsive-design/responsive-navigation/simple" | url }}">View Simple Responsive Nav</a>
+    <p>At its core, we are creating a CSS breakpoint, but adding a rule at the bottom that overrides the max-height property of #primary-nav:</p>
+    {% highlight "css" %}
+    /* This media query defines how the page displays beneath a breakpoint */
+    @media (max-width: 767px){
+      #toggle-nav{
+        display: block; /* display button beneath breakpoint */
+      }
+      #primary-nav{
+        max-height: 0;
+      }
+      #primary-nav li{
+        display: block;
+      }
+      /* Here, we override the rule when the body has a class of nav-open */
+      body.nav-open #primary-nav{
+        max-height: 400px;
+      }
+    }{% endhighlight %}
+
+    <p>The JavaScript used is pretty simple, but very powerful in how our page displays. Basically, we dynamically change the class attribute on a HTML element and let CSS handle the styling from there.</p>
+    {% highlight "js" %}
+    // Perform this after the window has loaded
+    window.onload = function() {
+      // First, tell JavaScript to remember which DOM element (in this case, a button) to reference (by id)
+      let toggleNav = document.getElementById('toggle-nav');
+
+      // Tell button to do something on click
+      toggleNav.addEventListener('click', function(){
+
+        // toggle the body's class attribute
+        document.body.classList.toggle('nav-open');
+
+      });
+    };{% endhighlight %}
+  </section>
+  <section>
+    <h2>Other Examples</h2>
+    <ul>
+      <li><a href="{{"/resources/responsive-design/responsive-navigation/responsive-nav-example" | url }}">View an example</a> using <a href="http://responsive-nav.com/#instructions">Responsive Nav</a></li>
+      <li>Here's an example using an <a href="{{"/resources/responsive-design/responsive-navigation/off-canvas-menu" | url }}">off-canvas menu (using JQuery)</a></li>
+      <li>For single pages, have a look at <a href="https://css-tricks.com/snippets/jquery/smooth-scrolling/">CSS-Tricks Smooth Scrolling</a></li>
+    </ul>
+  </section>
+  <section>
+    <h2>On Hamburger Menus</h2>
+    <p>Originally introduced from <a href="https://www.cultofmac.com/272311/apple-borrowed-ioss-hamburger-icon-xerox-parc/">Xerox PARC</a>, the hamburger menu has been <a href="https://lmjabreu.com/post/why-and-how-to-avoid-hamburger-menus/">a controversial design</a> choice (also see this <a href="https://www.nngroup.com/articles/hamburger-menus/">Nielsen Norman Group article</a>).</p>
+    <p>It can be implemented into your design via a unicode character (a Chinese glyph for the trigram for heaven):<br>
+
+    {% highlight "html" %}<button type="button">&#9776;</button>{% endhighlight %}
+    </p>
+    <p>Hamburger menus should be executed as buttons and not hyperlinks to be symantically correct. Despite the default styling, you can redefine the background, borders, and appearance of a button using CSS.</p>
+    <button type="button">&#9776;</button>
+
+    <p>Alternatively, you can use an image file or SVG icon like <a href="https://material.io/icons/#ic_menu">Google Materials ic_menu</a> or <a href="https://fontawesome.com/icons/bars?style=solid">FontAwesome's bars icon</a>. If you want to get ambitious, there's also <a href="https://jonsuh.com/hamburgers/">animated hamburger icons</a>.</p>
+
+  </section>
+
+  <aside>
+  <h2>Resources</h2>
+  <ul>
+    <li><a href="http://bradfrost.com/blog/web/responsive-nav-patterns/">Brad Frost's article on responsive navigation patterns</a></li>
+    <li><a href="https://www.w3schools.com/howto/howto_js_topnav_responsive.asp">W3 Schools Responsive Nav Example</a></li>
+    <li><a href="http://responsivenavigation.net/">ResponsiveNavigation.net</a></li>
+    <li><a href="http://responsive-nav.com/">Responsive Nav Plugin</a></li>
+  </ul>
+</aside>

@@ -1,0 +1,59 @@
+---
+layout: default.njk
+title: Responsive Images
+---
+
+<section>
+  <h2>Scalable Images</h2>
+  <p>This technique relies upon the parent container scaling responsively. This basically ensures that the child image doesn't break out of the container. The <code>height</code> property is set to "auto" to ensure the image's aspect ratio isn't compressed or stretched. You may wish to also set the <code>max-width</code> property to ensure the image doesn't exceed the container size.</p>
+  <p><b>In CSS:</b></p>
+  {% highlight "css" %}
+  img{
+    width: 100%;
+    height: auto;
+  }
+  {% endhighlight %}
+</section>
+
+<section>
+  <h2>Responsive Background Image</h2>
+  <p>This technique utilizes media queries to define a different background image based on browser properties.</p>
+  <p><b>In CSS:</b></p>
+  {% highlight "css" %}
+  #background{
+    background: url(flowers-800.jpg) no-repeat;
+  }
+  @media (max-width: 800px) {
+    #background{
+      background: url(flowers-600.jpg) no-repeat;
+    }
+  }
+  {% endhighlight %}
+
+  <p><a class="button" href="{{"/resources/responsive-design/responsive-images/background-image/" | url }}" target="_blank">See Example</a></p>
+</section>
+
+<section>
+  <h2>Picture tag</h2>
+  <p>A group of images based on different source definitions. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">MDN's Picture element documentation</a>.</p>
+
+  {% highlight "html" %}
+  <picture>
+   <source media="(min-width: 800px)" srcset="flowers-800.jpg">
+   <source media="(min-width: 600px)" srcset="flowers-600.jpg">
+   <source srcset="flowers-320.jpg">
+   <img srcset="flowers.jpg" alt="This picture loads on non-supporting browsers.">
+  </picture>
+  {% endhighlight %}
+
+  <p><a class="button" href="{{ "/resources/responsive-design/responsive-images/picture/" | url}}" target="_blank">See Example</a></p>
+
+</section>
+
+<aside>
+  <h3>Tips:</h3>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG">Scaleable Vector Graphics (SVG)</a> might be a better alternative to JPG or PNG when dealing with vector graphics.</li>
+    <li><a href="https://developers.google.com/speed/webp">WebP</a> is an image format that is 26% smaller than PNGs and up to 34% smaller than JPEG files. Here's a <a href="https://helpx.adobe.com/photoshop/kb/support-webp-image-format.html">WebP plugin for Adobe Photoshop</a>.</li>
+  </ul>
+</aside>

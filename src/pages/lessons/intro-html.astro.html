@@ -1,0 +1,189 @@
+---
+title: Introduction to HTML
+layout: default.njk
+---
+
+<p>
+  Here's a diagram illustrating the different structural elements of a basic
+  HTML tag:
+</p>
+<img src="{{ "/images/tag-structure.png" | url }}" alt="sample sitemap">
+
+<hr />
+
+<h2>HTML Page</h2>
+<p>
+  The basic boilerplate of an HTML page is below. To generate a new HTML page
+  you can use the
+  <a href="https://www.youtube.com/watch?v=3QEU9bphWE0"
+    >shortcut to create HTML page</a
+  >
+  in VS Code (via the <a href="https://emmet.io/">Emmet</a> plugin).
+</p>
+<p>
+  Another option is to download
+  <a href="https://html5boilerplate.com/">HTML5 Boilerplate</a>, an opinionated
+  starter kit with some good conventions.
+</p>
+{% highlight "html" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+{% endhighlight %}
+
+<hr />
+
+<h2>Comments:</h2>
+<p>
+  Below is an example of a comment in HTML, which can be used to leave notes for
+  the developer. While this won't render in the browser, it's still displayed
+  when viewing source code.
+</p>
+{% highlight "html" %}
+<!-- This is an example of a comment. Comments don't render in the browser -->
+{% endhighlight %}
+
+<hr />
+<h2>Headings</h2>
+<p>
+  HTML has six headings. Typically, you would only have one &lt;h1&gt; per page.
+  Subsequent headlines should follow the respective hierarchy. Bear in mind
+  search engines weigh the value of these headings.
+</p>
+<p
+  class="codepen"
+  data-height="300"
+  data-default-tab="html,result"
+  data-slug-hash="ExLjYrd"
+  data-user="richhauck"
+  style="
+    height: 300px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+    margin: 1em 0;
+    padding: 1em;
+  "
+>
+  <span
+    >See the Pen
+    <a href="https://codepen.io/richhauck/pen/ExLjYrd"> Headings</a> by Rich
+    Hauck (<a href="https://codepen.io/richhauck">@richhauck</a>) on
+    <a href="https://codepen.io">CodePen</a>.</span
+  >
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<hr />
+
+<h2>Paragraphs</h2>
+<p
+  class="codepen"
+  data-height="300"
+  data-default-tab="html,result"
+  data-slug-hash="jOxPOPY"
+  data-user="richhauck"
+  style="
+    height: 300px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+    margin: 1em 0;
+    padding: 1em;
+  "
+>
+  <span
+    >See the Pen
+    <a href="https://codepen.io/richhauck/pen/jOxPOPY"> Untitled</a> by Rich
+    Hauck (<a href="https://codepen.io/richhauck">@richhauck</a>) on
+    <a href="https://codepen.io">CodePen</a>.</span
+  >
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+<hr />
+<h2>Lists</h2>
+<p
+  class="codepen"
+  data-height="300"
+  data-default-tab="html,result"
+  data-slug-hash="BaxNBEL"
+  data-user="richhauck"
+  style="
+    height: 300px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+    margin: 1em 0;
+    padding: 1em;
+  "
+>
+  <span
+    >See the Pen
+    <a href="https://codepen.io/richhauck/pen/BaxNBEL"> Lists</a> by Rich Hauck
+    (<a href="https://codepen.io/richhauck">@richhauck</a>) on
+    <a href="https://codepen.io">CodePen</a>.</span
+  >
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+<hr />
+<h2>Hyperlinks</h2>
+<p>
+  Hyperlinks can link to other resources, such as links, websites, media, or
+  other content within the same page. In the following example, the link would
+  navigate the user to page.html within the same folder/directory.
+</p>
+
+{% highlight "html" %}
+<a href="page.html">Page</a>
+<a href="./page.html">Page</a>
+{% endhighlight %}
+<p>
+  Hyperlinks can also link to external websites. The example below links to
+  HACC's website and contains the attribute _target (in this case telling the
+  link to open in a new tab) and title (which displays a tooltip when the user
+  hovers over the link):
+</p>
+{% highlight "html" %}
+<a href="https://www.hacc.edu" target="_blank" title="HACC">HACC</a>
+{% endhighlight %}
+<a href="https://www.hacc.edu" target="_blank" title="HACC">HACC</a>
+<hr />
+
+<aside>
+  <h3>Additional Resources</h3>
+  <ul>
+    <li>
+      <a href="https://www.codecademy.com/learn/learn-html"
+        >Codecademy Learn HTML</a
+      >
+    </li>
+    <li>
+      <a href="https://www.w3schools.com/tags/">W3Schools list of HTML Tags</a>
+    </li>
+    <li>
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"
+        >MDN HTML Basics</a
+      >
+    </li>
+    <li>
+      <a href="https://validator.w3.org/"
+        >W3C Validator - for validating HTML pages.</a
+      >
+    </li>
+  </ul>
+</aside>

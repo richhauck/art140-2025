@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>100% Background Image</title>
+    <style>
+      html {
+        background: url({{'/images/lessons/bryce.webp'|url}}) no-repeat center
+          center fixed;
+        background-size: cover;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+      #content {
+        width: 50%;
+        margin: 0 auto;
+        background-color: white;
+        width: 300px;
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      This is an example with a 100% scalable background image for the page.
+      Resize your browser to see.
+    </div>
+  </body>
+</html>
