@@ -1,45 +1,50 @@
-  :root {
-    --red: #912834;
-    --lightRed: #f7a8b0;
-    --blue: #3081f2;
-    --headertextcolor: #353843;
-    --textColor: #707070;
-    --bgcolor: #353843;
-    --lightGray: #f9f9fa;
-    --borderColor: #dcdee6;
-    --basePadding: 1em;
-    --headerHeight: 120px;
-    --transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
-  }
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    width: 100%;
-    height: 100%;
-    /*color: var(--textColor);*/
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  .row {
-    display: flex;
-  }
-  aside{
-	display: block;
-	padding: 1em;
-	background-color: rgb(255, 253, 232);
+:root {
+  --red: #9e1b31;
+  --lightRed: #f7a8b0;
+  --blue: #3070ab;
+  --headertextcolor: #353843;
+  --textColor: #707070;
+  --bgcolor: #353843;
+  --lightGray: #f9f9fa;
+  --borderColor: #dcdee6;
+  --basePadding: 1em;
+  --headerHeight: 120px;
+  --transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
-.links{
-	display: block;
-	margin: 1em 0;
-	padding: 1em;
-	background-color: rgb(224, 238, 240);
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+  /*color: var(--textColor);*/
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.5rem;
+}
+pre {
+  padding: 1rem;
+  line-height: 1rem;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.row {
+  display: flex;
+}
+aside {
+  display: block;
+  padding: 1em;
+  background-color: rgb(255, 253, 232);
+}
+.links {
+  display: block;
+  margin: 1em 0;
+  padding: 1em;
+  background-color: rgb(224, 238, 240);
 }
 a {
   color: var(--blue);

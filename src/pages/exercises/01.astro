@@ -4,12 +4,107 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title={title}>
-  <ol>
-    <li><a href="./01">Personal splash page on GitHub</a></li>
-    <li><a href="./02">CSS Box model exercise</a></li>
-    <li><a href="./03">Multi-column page layout</a></li>
-    <li><a href="./04">Multi-page site</a></li>
-    <li><a href="./05">Responsive page layout</a></li>
-    <li><a href="./06">Responsive page layout with a framework</a></li>
-  </ol>
+<h2>Personal splash page on GitHub</h2>
+<p>
+  For this exercise you will publish the foundation for your website on GitHub.
+</p>
+<ol>
+  <li>
+    Create a free account with <a href="https://www.github.com/">GitHub</a> and
+    download <a href="https://desktop.github.com/">GitHub Desktop</a>. Use your
+    HACC username for your GitHub account.
+  </li>
+  <li>
+    Follow the instructions on
+    <a href="https://pages.github.com">https://pages.github.com</a> while
+    keeping in mind the following additional steps:
+    <ul>
+      <li>For step 1, choose &quot;User or organization site&quot;.</li>
+      <li>
+        For step 2, &quot;Clone the repository&quot; you'll need to set a place
+        on your computer's hard drive where you will store your site/repository.
+        Personally, I place this on
+        <em>Macintosh HD/ Users/myname/Sites/myname.github.io</em> on my Mac. In
+        any case, choose a dedicated folder where you can edit files.
+      </li>
+      <li>
+        For step 3, &quot;Create an index file&quot;, in addition to creating an
+        index.html page, you should also create a folder structure within your
+        repository for the semester. The folder structure should look as
+        follows:
+        <div
+          style="
+            border: 1px solid #ccc;
+            background: #efefef;
+            padding: 0 1em;
+            margin: 1em 0;
+          "
+        >
+          <ul>
+            <li>index.html</li>
+            <li>/images</li>
+            <li>/styles</li>
+            <li>
+              /projects
+              <ul>
+                <li>/project-1</li>
+                <li>/project-2</li>
+                <li>/project-3</li>
+                <li>/project-4</li>
+              </ul>
+            </li>
+            <li>
+              /exercises
+              <ul>
+                <li>/exercise-1</li>
+                <li>/exercise-2</li>
+                <li>/exercise-3</li>
+                <li>/exercise-4</li>
+                <li>/exercise-5</li>
+                <li>/exercise-6</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        GitHub won't acknowledge the existence of these empty folders until they
+        contain files, so don't worry if they don't show for you in GitHub
+        Desktop. This will help keep assignments organized when you do populate
+        and publish them.<br />
+        <br />
+        For your index.html page itself, it should be a splash page about you.
+        Be creative! At a minimum, it should include your name (&lt;h1&gt;)
+        title, and one image (embedded or as a
+        <a href="https://www.w3schools.com/cssref/pr_background-image.php"
+          >background image</a
+        >).
+      </li>
+      <li>For step 4, it may take a few moments for the page to update.</li>
+    </ul>
+  </li>
+</ol>
+
+<aside>
+  <p>
+    To better familiarize yourself with GitHub, I'd recommend completing the
+    Quickstart exercises:
+  </p>
+  <ul>
+    <li>
+      <a href="https://docs.github.com/en/get-started/quickstart/hello-world"
+        >Hello World</a
+      >
+    </li>
+    <li>
+      <a href="https://docs.github.com/en/get-started/quickstart/set-up-git"
+        >Set up Git</a
+      >
+    </li>
+    <li>
+      <a href="https://docs.github.com/en/get-started/quickstart/create-a-repo"
+        >Create a repo</a
+      >
+    </li>
+  </ul>
+</aside>
+
 </Layout>

@@ -4,12 +4,38 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title={title}>
-  <ol>
-    <li><a href="./01">Personal splash page on GitHub</a></li>
-    <li><a href="./02">CSS Box model exercise</a></li>
-    <li><a href="./03">Multi-column page layout</a></li>
-    <li><a href="./04">Multi-page site</a></li>
-    <li><a href="./05">Responsive page layout</a></li>
-    <li><a href="./06">Responsive page layout with a framework</a></li>
-  </ol>
+<h2>Build a multipage microsite</h2>
+<p>Create a simple three-page website with links to the different pages.</p>
+<p>The site should feature the following:
+<ul>
+    <li>A simple navigation that correctly links to different pages in the site. The link to the current page should be highlighted</li>
+    <li>At least one image</li>
+    <li>A page title (h1) on each page</li>
+    <li>A separate style sheet linked to all of the pages</li>
+    <li>A favicon and Apple touch icon</li>
+    <li>A 404 file</li>
+</ul>
+<p>Don't worry about creating an elaborate design/layout. The priority is to have pages with working links.</p>
+<p>You're welcome to use this <a href={"/assets/poker.html"}>page on poker</a> for content or come up with your own.</p>
+<aside>
+    <strong>Favicon</strong>
+<ul>
+  <li><a href="https://www.w3schools.com/html/html_favicon.asp">W3Schools article</a></li>
+  <li><a href="https://webflow.com/blog/favicon-guide">Webflow Favicon guide</a><br>
+  </li>
+  <li><a href="https://realfavicongenerator.net">Favicon generator</a></li>
+</ul>
+<strong>Apple Touch Icon</strong><br>
+<ul>
+  <li><a href="https://developer.apple.com/design/human-interface-guidelines/app-icons">Apple Documentation</a><br>
+    </li>
+  <li><a href="https://webhint.io/docs/user-guide/hints/hint-apple-touch-icons/">WebHint article on Apple Touch Icons</a></li>
+</ul>
+<strong>Open Graph</strong>
+<ul>
+  <li><a href="https://ogp.me/">OpenGraph standard</a></li>
+  <li><a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook Developers documentation</a></li>
+</ul>
+</aside>
+</p>
 </Layout>
