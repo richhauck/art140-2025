@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Example</title>
+    <style>
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      main > div {
+        margin-bottom: 1em;
+      }
+      div {
+        padding: 1em;
+        border: 1px dashed gray;
+      }
+      .flex {
+        display: flex;
+        gap: 1em;
+      }
+      #example1 > div {
+        flex: 1;
+      }
+
+      #example2 > div:nth-child(1) {
+        width: 100px;
+      }
+      #example2 > div:nth-child(2) {
+        width: 200px;
+      }
+      #example2 > div:nth-child(3) {
+        width: calc(100% - 300px);
+      }
+      @media screen and (max-width: 767px) {
+        .flex {
+          flex-direction: column;
+        }
+        #example2 > div:nth-child(1),
+        #example2 > div:nth-child(2),
+        #example2 > div:nth-child(3) {
+          width: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="example1" class="flex">
+        <div>1</div>
+        <div>2</div>
+      </div>
+
+      <div id="example2" class="flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+---
+title: Flex Box
+layout: default.njk
+---
+
+<p>
+  A CSS flex box is an essential building block of HTML layouts, as it can
+  create rows or columns and transition between the two.
+</p>
+
+<p>First, add a div with a class name of "flex" to your HTML:</p>
+
+{% highlight "html" %}
+<div class="flex"></div>
+{% endhighlight %}
+
+<p>In your CSS, we'll add a class called 'flex':</p>
+{% highlight "css" %} .flex{ display: flex; } {% endhighlight %}
+<p>
+  Using a class to handle a specific property like this is often called a
+  "utility" class. Instead of baking the behavior into a specific layout
+  element, we can tag anything we want to behave with this simple selector.
+</p>
+<p>
+  Now, any child elements you add to this container will behave as columns. For
+  instance, to create a two-column layout:
+</p>
+
+{% highlight "html" %}
+<div class="flex">
+  <div>1</div>
+  <div>2</div>
+</div>
+{% endhighlight %}
+
+<p>
+  These child containers will only span the width of their contents, however,
+  you can
+</p>

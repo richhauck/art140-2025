@@ -1,7 +1,10 @@
 ---
-layout: "default.njk"
-title: CSS Layouts
+const title = "CSS Layouts";
+import Layout from "../../../layouts/Layout.astro";
+import { Code } from 'astro:components';
 ---
+
+<Layout title={title}>
 <!--
 <h2>z-Index</h2>
 <p class="codepen" data-zoom="0.25"  data-zoom="0.25" data-height="300" data-default-tab="html,result" data-slug-hash="ZEqaoPp" data-user="richhauck" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
@@ -68,3 +71,4 @@ title: CSS Layouts
   Float Example</a> by Rich Hauck (<a href="https://codepen.io/richhauck">@richhauck</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
+</Layout>

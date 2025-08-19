@@ -1,8 +1,10 @@
 ---
-layout: 'default.njk'
-title: Intro to Cascading Style Sheets (CSS)
+const title = "CSS Basics";
+import Layout from "../../../layouts/Layout.astro";
+import { Code } from 'astro:components';
 ---
 
+<Layout title={title}>
 <p>
   Cascading Style Sheets (CSS) is a language used to define the presentation and
   style of HTML.
@@ -12,28 +14,29 @@ title: Intro to Cascading Style Sheets (CSS)
 <p>CSS can reside within three places:</p>
 <ol>
   <li>
-    Inline via a style attribute: {% highlight "html" %}
-    <h1 style="color: green">This is a styled header</h1>
-    {% endhighlight %}
+    Inline via a style attribute:
+    <Code code={`<h1 style="color: green">This is a styled header</h1>`} lang="html"/>
   </li>
   <li>
-    Within the page within a head tag: {% highlight "html" %} ...
-    <head>
-      <style>
-        h1 {
-          color: green;
-        }
-      </style>
-    </head>
-    ... {% endhighlight %}
+    Within the page within a head tag: 
+<Code code={`...
+<head>
+<style>
+    h1{
+        color: green;
+    }
+</style>
+</head>
+...`} lang="html"/>
   </li>
   <li>
-    Within the page within a head tag: {% highlight "html" %} ...
-    <head>
-      ...
-      <link rel="stylesheet" href="style.css" />
-    </head>
-    ... {% endhighlight %}
+    Within the page within a head tag: 
+<Code code={`...
+<head>
+    ...
+    <link rel="stylesheet" href="style.css" />
+</head>
+...`} lang="html"/>
   </li>
 </ol>
 <aside>
@@ -47,49 +50,49 @@ title: Intro to Cascading Style Sheets (CSS)
   You can use the HTML tag as the selector in your CSS rule. This will apply to
   all tags in the page.
 </p>
-{% highlight "html" %}
-<style>
-  p {
-    background-color: lightblue;
-  }
+
+<Code code={`<style>
+    p{
+        background-color: lightblue;
+    }
 </style>
 ...
-<p>This is a paragraph</p>
-{% endhighlight %}
+<p>This is a paragraph</p>`} lang="html"/>
+    
 <h3>Class Attribute</h3>
 <p>
   When you need more specificity styling elements that might recur on the page.
 </p>
-{% highlight "html" %}
-<style>
+
+
+<Code code={`<style>
   .my-style {
     background-color: lightblue;
   }
 </style>
 ...
 <p class="my-style">This will have a blue background.</p>
-<p>This paragraph won't.</p>
-{% endhighlight %}
+<p>This paragraph won't.</p>`} lang="html"/>
+
 <h3>Id Attribute</h3>
 <p>Ids are unique to the page--they can only be used once.</p>
-{% highlight "html" %}
-<style>
+
+
+<Code code={`<style>
   #my-style {
     background-color: lightblue;
   }
 </style>
 ...
-<p id="my-style">This is a paragraph</p>
-{% endhighlight %}
-
+<p id="my-style">This is a paragraph</p>`} lang="html"/>
 <hr />
 <h2>Complex Styles</h2>
 <p>
   CSS3 recently enabled nesting attributes. In the below example, any paragraph
   tag within a div with .my-style will have a padding of 1 rem.
 </p>
-{% highlight "html" %}
-<style>
+
+<Code code={`<style>
   div.my-style {
     p {
       padding: 1rem;
@@ -101,17 +104,16 @@ title: Intro to Cascading Style Sheets (CSS)
   <p>This is a paragraph</p>
   <p>This is a another paragraph</p>
 </div>
-<p>This is a paragraph</p>
-{% endhighlight %}
-
+<p>This is a paragraph</p>`} lang="html"/>
 <hr />
 <h2>CSS custom properties</h2>
 <p>
   Unofficially known as CSS variables, this is a common technique to reuse
   values across your stylesheet .
 </p>
-{% highlight "html" %}
-<style>
+
+
+<Code code={`<style>
   :root {
     --base-padding: 1em;
     --main-text-color: #333;
@@ -127,8 +129,7 @@ title: Intro to Cascading Style Sheets (CSS)
 </style>
 ...
 <h2 class="subhead">This is a subhead</h2>
-<p class="subtext">This is subtext.</p>
-{% endhighlight %}
+<p class="subtext">This is subtext.</p>`} lang="html"/>
 
 <aside class="links">
   <h3>Link:</h3>
@@ -140,7 +141,7 @@ title: Intro to Cascading Style Sheets (CSS)
 </aside>
 
 <h2>CSS Box Model</h2>
-<img src="{{ "/images/box-model.png" | url }}" alt="CSS Box Model">
+<img src={"/images/box-model.png"} alt="CSS Box Model">
 <br />
 <p>
   Note the calculated size in the browser will add up the margin, padding,
@@ -243,3 +244,5 @@ title: Intro to Cascading Style Sheets (CSS)
     >
   </li>
 </ul>
+
+</Layout>
