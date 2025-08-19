@@ -1,13 +1,14 @@
 ---
-title: Introduction to HTML
-layout: default.njk
+const title = "Introduction to HTML";
+import Layout from "../../layouts/Layout.astro";
+import { Code } from 'astro:components';
 ---
-
+<Layout title={title}>
 <p>
   Here's a diagram illustrating the different structural elements of a basic
   HTML tag:
 </p>
-<img src="{{ "/images/tag-structure.png" | url }}" alt="sample sitemap">
+<img src={"/images/tag-structure.png"} alt="sample sitemap">
 
 <hr />
 
@@ -25,8 +26,8 @@ layout: default.njk
   <a href="https://html5boilerplate.com/">HTML5 Boilerplate</a>, an opinionated
   starter kit with some good conventions.
 </p>
-{% highlight "html" %}
-<!DOCTYPE html>
+<Code
+code={`<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -35,8 +36,9 @@ layout: default.njk
     <title>Document</title>
   </head>
   <body></body>
-</html>
-{% endhighlight %}
+</html>`}
+  lang="html"
+/>
 
 <hr />
 
@@ -46,9 +48,8 @@ layout: default.njk
   the developer. While this won't render in the browser, it's still displayed
   when viewing source code.
 </p>
-{% highlight "html" %}
-<!-- This is an example of a comment. Comments don't render in the browser -->
-{% endhighlight %}
+
+<Code code={`<!-- This is an example of a comment. Comments don't render in the browser -->`} lang="html"/>
 
 <hr />
 <h2>Headings</h2>
@@ -147,19 +148,17 @@ layout: default.njk
   navigate the user to page.html within the same folder/directory.
 </p>
 
-{% highlight "html" %}
-<a href="page.html">Page</a>
-<a href="./page.html">Page</a>
-{% endhighlight %}
+<Code code={`<a href="page.html">Page</a>
+<a href="./page.html">Page</a>`} lang="html"/>
+
 <p>
   Hyperlinks can also link to external websites. The example below links to
   HACC's website and contains the attribute _target (in this case telling the
   link to open in a new tab) and title (which displays a tooltip when the user
   hovers over the link):
 </p>
-{% highlight "html" %}
-<a href="https://www.hacc.edu" target="_blank" title="HACC">HACC</a>
-{% endhighlight %}
+<Code code={`<a href="https://www.hacc.edu" target="_blank" title="HACC">HACC</a>`} lang="html"/>
+
 <a href="https://www.hacc.edu" target="_blank" title="HACC">HACC</a>
 <hr />
 
@@ -187,3 +186,4 @@ layout: default.njk
     </li>
   </ul>
 </aside>
+</Layout>

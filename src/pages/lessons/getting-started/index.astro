@@ -1,7 +1,9 @@
 ---
-layout: 'default.njk'
-title: Getting Started
+const title = "Getting Started";
+import Layout from "../../../layouts/Layout.astro";
 ---
+
+<Layout title={title}>
 
 <h2>Software</h2>
 <p>
@@ -64,3 +66,5 @@ title: Getting Started
   download <a href="https://desktop.github.com/">GitHub Desktop</a> as you'll
   use it to set up your <a href="https://pages.github.com/">GitHub pages</a>.
 </p>
+
+</Layout>

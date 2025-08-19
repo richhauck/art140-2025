@@ -1,8 +1,8 @@
 ---
-title: Frameworks
-layout: default.njk
+const title = "Frameworks";
+import Layout from "../../layouts/Layout.astro";
 ---
-
+<Layout title={title}>
 <h2>Tools</h2>
 <ul>
   <li>
@@ -17,6 +17,7 @@ layout: default.njk
 </ul>
 <h2>Frameworks</h2>
 <ul>
+  <li><a href="https://2024.stateofcss.com/en-US/tools/">State of CSS</a></li>
   <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
   <li><a href="https://materializecss.com/">Materialize CSS</a></li>
   <li><a href="https://tailwindcss.com/">Tailwind CSS</a></li>
@@ -49,3 +50,4 @@ layout: default.njk
     </ul>
   </li>
 </ul>
+</Layout>
