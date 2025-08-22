@@ -22,7 +22,7 @@ const { title } = Astro.props;
     </button>
     <header id="primary-header">
       <div>
-        <h1>Art 140: Web Design</h1><p>
+        <h1>Art 140: <span>Web Design</span></h1><p>
           Fall 2025 | Harrisburg Area Community College
         </p>
       </div>
@@ -87,6 +87,7 @@ const { title } = Astro.props;
     flex-direction: column;
   }
   #primary-header h1 {
+    color: #fff;
     margin: 0;
     font-size: 2em;
     line-height: 1.1em;
@@ -107,6 +108,7 @@ const { title } = Astro.props;
     letter-spacing: 1px;
     text-transform: uppercase;
     opacity: 0.7;
+    font-size: 11px;
 
     @media (max-width: 1024px) {
       font-size: 0.8rem;
