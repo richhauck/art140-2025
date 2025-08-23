@@ -1,7 +1,8 @@
 ---
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
-import "../styles/global.css";
+import "../styles/global.scss";
+import "../styles/hamburger.css";
 const { title } = Astro.props;
 ---
 
@@ -11,6 +12,7 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script is:inline src="/scripts/main.js"></script>
     <meta name="generator" content={Astro.generator} />
     <title>{title} - Art 140 Web Design</title>
   </head>
@@ -57,12 +59,12 @@ const { title } = Astro.props;
     left: 1em;
     display: none;
     z-index: 100;
-
-    &:hover {
-      background-color: var(--blue);
-    }
-
-    @media (max-width: 767px) {
+  }
+  #toggle-nav:hover {
+    background-color: var(--blue);
+  }
+  @media (max-width: 767px) {
+    #toggle-nav {
       display: block;
     }
   }
@@ -77,9 +79,11 @@ const { title } = Astro.props;
     justify-content: space-between;
     position: fixed;
     top: 0;
-
-    @media (max-width: 1024px) {
+  }
+  @media (max-width: 1024px) {
+    #primary-header {
       padding: 1em;
+      flex-direction: column;
     }
   }
   #primary-header #title {
@@ -92,9 +96,6 @@ const { title } = Astro.props;
     font-size: 2em;
     line-height: 1.1em;
     letter-spacing: 2px;
-    @media (max-width: 1024px) {
-      font-size: 1.5em;
-    }
   }
   #primary-header a {
     color: #fff;
@@ -109,11 +110,6 @@ const { title } = Astro.props;
     text-transform: uppercase;
     opacity: 0.7;
     font-size: 11px;
-
-    @media (max-width: 1024px) {
-      font-size: 0.8rem;
-      letter-spacing: 1px;
-    }
   }
   #primary-header #meta {
     padding-right: 0.5em;
@@ -133,29 +129,30 @@ const { title } = Astro.props;
   }
   #content {
     margin: var(--headerHeight) 0 0 320px;
-
-    @media (max-width: 767px) {
+  }
+  #content ol {
+    padding: 1em !important;
+    list-style: decimal;
+  }
+  #content ul {
+    padding: 1em !important;
+    list-style: square;
+  }
+  #content li {
+    padding: 0 0.5em;
+  }
+  @media (max-width: 767px) {
+    #content {
       margin: var(--headerHeight) 0 0 0;
     }
-
-    ol {
-      padding: 1em !important;
-      list-style: decimal;
-    }
-    ul {
-      padding: 1em !important;
-      list-style: square;
-    }
-    li {
-      padding: 0 0.5em;
-    }
   }
-
   #inner-content {
     padding: 1em;
     width: 65%;
     background-color: var(--primary);
-    @media (max-width: 1024px) {
+  }
+  @media (max-width: 1024px) {
+    #inner-content {
       width: 100%;
     }
   }

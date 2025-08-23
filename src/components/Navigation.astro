@@ -3,22 +3,24 @@
     <ul>
       <li><a href="/">Syllabus</a></li>
       <li><a href="/schedule">Schedule</a></li>
-      <li><a href="/projects">Projects</a>
-      <ul>
-        <li><a href="/projects/project-1">01</a></li>
-        <li><a href="/projects/project-2">02</a></li>
-        <li><a href="/projects/project-3">03</a></li>
-        <li><a href="/projects/project-4">04</a></li>
-      </ul>
+      <li>
+        <a href="/projects">Projects</a>
+        <ul>
+          <li><a href="/projects/project-1">01</a></li>
+          <li><a href="/projects/project-2">02</a></li>
+          <li><a href="/projects/project-3">03</a></li>
+          <li><a href="/projects/project-4">04</a></li>
+        </ul>
       </li>
-      <li><a href="/exercises">Exercises</a>
-      <ul>
-        <li><a href="/exercises/01">01</a></li>
-        <li><a href="/exercises/02">02</a></li>
-        <li><a href="/exercises/03">03</a></li>
-        <li><a href="/exercises/04">04</a></li>
-        <li><a href="/exercises/05">05</a></li>
-        <li><a href="/exercises/06">06</a></li>
+      <li>
+        <a href="/exercises">Exercises</a>
+        <ul>
+          <li><a href="/exercises/01">01</a></li>
+          <li><a href="/exercises/02">02</a></li>
+          <li><a href="/exercises/03">03</a></li>
+          <li><a href="/exercises/04">04</a></li>
+          <li><a href="/exercises/05">05</a></li>
+          <li><a href="/exercises/06">06</a></li>
         </ul>
       </li>
       <li>
@@ -30,31 +32,40 @@
           <li><a href="/resources/web-fonts/">Web Fonts</a></li>
         </ul>
       </li>
-      <li>Tutorials
+      <li>
+        Tutorials
         <ul>
           <li><a href="/tutorials/flexbox/">Flexbox</a></li>
           <li><a href="/tutorials/navigation/">Navigation</a></li>
-          <li><a href="/tutorials/responsive-navigation/">Responsive Navigation</a></li>
+          <li>
+            <a href="/tutorials/responsive-navigation/">Responsive Navigation</a
+            >
+          </li>
         </ul>
       </li>
-      <li>Lessons
+      <li>
+        Lessons
         <ul>
           <li><a href={"/lessons/getting-started/"}>Getting Started</a></li>
           <li><a href={"/lessons/intro-html/"}>Introduction to HTML</a></li>
-          <li><a href={"/lessons/working-with-images/"}>Working with Images</a></li>
+          <li>
+            <a href={"/lessons/working-with-images/"}>Working with Images</a>
+          </li>
           <li><a href={"/lessons/css-basics/"}>CSS Basics</a></li>
           <li><a href={"/lessons/css-basics/layouts"}>CSS Layouts</a></li>
-          <li><a href={"/lessons/responsive-navigation"}>Responsive Navigation</a></li>
+          <li>
+            <a href={"/lessons/responsive-navigation"}>Responsive Navigation</a>
+          </li>
           <li><a href={"/lessons/frameworks/"}>Frameworks</a></li>
         </ul>
       </li>
     </ul>
   </div>
 </nav>
-<style>
+<style lang="scss">
   #primary-nav {
     transition: var(--transition);
-    top: var(--headerHeight);
+    top: 120px;
     width: 300px;
     background-color: var(--lightGray);
     position: fixed;
@@ -62,11 +73,86 @@
     overflow-y: auto;
     z-index: 10;
     height: 100%;
+
     @media (max-width: 767px) {
       width: 0;
     }
+
+    #inner-nav {
+      padding: 2em 2em 8em 2em;
+
+      a:link,
+      a:visited {
+        color: var(--textColor);
+      }
+      a:hover {
+        color: var(--blue);
+      }
+    }
+    .group {
+      ul {
+        margin: 1em 0;
+        padding: 0 0 2em 0;
+      }
+      input[type="image"] {
+        transition: all 0.3s ease-out;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20px;
+        height: auto;
+        vertical-align: middle;
+      }
+      div {
+        transition: all 0.6s ease-in;
+        overflow: hidden;
+        max-height: 0;
+      }
+
+      &.open {
+        div {
+          max-height: 1000px;
+        }
+        input[type="image"] {
+          transform: rotate(90deg);
+        }
+      }
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      font-size: 0.9em;
+
+      & > li {
+        position: relative;
+        list-style: none;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+
+        &:last-child > ul {
+          border-bottom: none;
+          margin-bottom: 4em;
+        }
+
+        ul {
+          margin: 0.5em 0;
+          border-bottom: 1px solid var(--borderColor);
+
+          li {
+            list-style: square;
+            margin-left: 1em;
+            font-weight: normal;
+          }
+        }
+      }
+    }
   }
-  #inner-nav {
-    padding: 2em 2em 8em 2em;
+
+  body.nav-open {
+    overflow: hidden;
+    #primary-nav {
+      width: 100%;
+    }
   }
 </style>

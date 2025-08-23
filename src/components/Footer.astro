@@ -1,9 +1,34 @@
+---
+import { ChevronUp } from "@lucide/astro";
+---
+
 <footer id="primary-footer">
-  <div class="row"><button id="top-button">Back to Top</button></div>
+  <div class="row">
+    <button id="top-button"
+      ><ChevronUp size="16" stroke="#fff" />Back to Top</button
+    >
+  </div>
 </footer>
-<style>
+<style lang="scss">
   footer#primary-footer {
     display: block;
+
+    & .row {
+      justify-content: right;
+      padding: 1rem;
+    }
+  }
+  #top-button {
+    cursor: pointer;
+    color: #fff;
+    border: none;
     background-color: var(--red);
+    padding: 5px 10px;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    &:hover {
+      background-color: var(--red);
+    }
   }
 </style>
