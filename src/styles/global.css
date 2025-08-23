@@ -4,6 +4,7 @@
   --blue: #3070ab;
   --headertextcolor: #353843;
   --textColor: #707070;
+  --iconStroke: #ccc;
   --bgcolor: #353843;
   --lightGray: #f9f9fa;
   --borderColor: #dcdee6;
@@ -123,4 +124,12 @@ th li {
 .cards > section {
   padding: var(--basePadding);
   width: 50%;
+}
+svg.lucide {
+  stroke: var(--iconStroke);
+  vertical-align: middle;
+  margin-right: 0.25em;
+  margin-top: -0.25rem;
+  width: 32px;
+  height: 32px;
 }
