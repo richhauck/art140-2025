@@ -4,24 +4,32 @@
       <li><a href="/">Syllabus</a></li>
       <li><a href="/schedule">Schedule</a></li>
       <li>
-        <a href="/projects">Projects</a>
-        <ul>
-          <li><a href="/projects/project-1">01</a></li>
-          <li><a href="/projects/project-2">02</a></li>
-          <li><a href="/projects/project-3">03</a></li>
-          <li><a href="/projects/project-4">04</a></li>
-        </ul>
+        <details>
+          <summary>Projects</summary>
+          <div class="content">
+            <ul>
+              <li><a href="/projects/project-1">01</a></li>
+              <li><a href="/projects/project-2">02</a></li>
+              <li><a href="/projects/project-3">03</a></li>
+              <li><a href="/projects/project-4">04</a></li>
+            </ul>
+          </div>
+        </details>
       </li>
       <li>
-        <a href="/exercises">Exercises</a>
-        <ul>
-          <li><a href="/exercises/01">01</a></li>
-          <li><a href="/exercises/02">02</a></li>
-          <li><a href="/exercises/03">03</a></li>
-          <li><a href="/exercises/04">04</a></li>
-          <li><a href="/exercises/05">05</a></li>
-          <li><a href="/exercises/06">06</a></li>
-        </ul>
+        <details>
+          <summary>Exercises</summary>
+          <div class="content">
+            <ul>
+              <li><a href="/exercises/01">01</a></li>
+              <li><a href="/exercises/02">02</a></li>
+              <li><a href="/exercises/03">03</a></li>
+              <li><a href="/exercises/04">04</a></li>
+              <li><a href="/exercises/05">05</a></li>
+              <li><a href="/exercises/06">06</a></li>
+            </ul>
+          </div>
+        </details>
       </li>
       <li>
         Resources
@@ -148,6 +156,24 @@
       }
     }
   }
+  /* Details/Summary styles */
+  summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  summary::after {
+    content: "▼";
+    transform: rotate(-90deg);
+    margin-left: 0.5em;
+    right: 0;
+    position: absolute;
+    transition: transform 0.2s ease;
+  }
+  details[open] summary::after {
+    transform: rotate(0);
+  }
 
   body.nav-open {
     overflow: hidden;
@@ -156,3 +182,4 @@
     }
   }
 </style>
+<script is:inline src="/scripts/accordion.js"></script>
