@@ -1,20 +1,35 @@
 ---
 const title = "Responsive Navigation";
 import Layout from "../../../layouts/Layout.astro";
-import { Code } from 'astro:components';
+import { Code } from "astro:components";
 ---
 
 <Layout title={title}>
- <p>Building off of the <a href={"/tutorials/navigation/"}>previous tutorial</a>, we'll add a button that toggles the display of the menu.</p>
-<p>While we could have the navigation simply toggle between showing and hiding, it's nicer to see a subtle animation, so we'll have the menu height gradually animate.</p>
-<p><a class="button" target="_blank" href={"/tutorials/responsive-navigation/example"}>View the example</a>
-</p>
+  <p>
+    Building off of the <a href={"/tutorials/navigation/"}>previous tutorial</a
+    >, we'll add a button that toggles the display of the menu.
+  </p>
+  <p>
+    While we could have the navigation simply toggle between showing and hiding,
+    it's nicer to see a subtle animation, so we'll have the menu height
+    gradually animate.
+  </p>
+  <p>
+    <a
+      class="button"
+      target="_blank"
+      href={"/tutorials/responsive-navigation/example.html"}>View the example</a
+    >
+  </p>
 
-<h2>1. Wrapping the navigation</h2>
-<p> To achieve this animation, we'll wrap our navigation list in a div. I've given it a class of "inner".</p>
+  <h2>1. Wrapping the navigation</h2>
+  <p>
+    To achieve this animation, we'll wrap our navigation list in a div. I've
+    given it a class of "inner".
+  </p>
 
-<Code
-  code={`<nav id="primary-nav">
+  <Code
+    code={`<nav id="primary-nav">
     <div class="inner">
       <ul>
         <li><a href="#">Home</a></li>
@@ -24,71 +39,105 @@ import { Code } from 'astro:components';
       </ul>
     </div>
   </nav>`}
-  lang="html"
-/>
+    lang="html"
+  />
 
   <p>In your media query, set the following style</p>
 
-  <Code code={`.inner {overflow: hidden;}`} lang="css"/>
+  <Code code={`.inner {overflow: hidden;}`} lang="css" />
 
-  <p>This will behave as a mask, and in a later step we'll be changing the height so this mask appears to animate.</p>
+  <p>
+    This will behave as a mask, and in a later step we'll be changing the height
+    so this mask appears to animate.
+  </p>
 
-<h2>2. Adding the hamburger button</h2>
-<p>Add this button right after the body tag:</p>
-<Code
-  code={`<button id="toggle-nav-btn"></button>`}
-  lang="html"
-/>
+  <h2>2. Adding the hamburger button</h2>
+  <p>Add this button right after the body tag:</p>
+  <Code code={`<button id="toggle-nav-btn"></button>`} lang="html" />
 
-<p>Don't worry that it contains now message, as we'll add that, later. Next, let's add some button styling:</p>
+  <p>
+    Don't worry that it contains now message, as we'll add that, later. Next,
+    let's add some button styling:
+  </p>
   <Code
-  code={`#toggle-nav-btn {
+    code={`#toggle-nav-btn {
     display: none;
     position: absolute;
     right: 1em;
     top: 1em;
   }`}
-  lang="css"
-/>
+    lang="css"
+  />
 
-<p>I often give this button absolute positioning and place it outside of the navigation, as we'll be toggling the visibility of the navigation and don't want that change to impact our button. </p>
-<p>Now, in your breakpoint, let's show  the button at mobile:</p>
+  <p>
+    I often give this button absolute positioning and place it outside of the
+    navigation, as we'll be toggling the visibility of the navigation and don't
+    want that change to impact our button.
+  </p>
+  <p>Now, in your breakpoint, let's show the button at mobile:</p>
 
   <Code
-  code={`@media (max-width: 767px) {
+    code={`@media (max-width: 767px) {
     /* Additional styles here... */
     #toggle-nav-btn {
         display: block;
     }
 }`}
-  lang="css"
-/>
+    lang="css"
+  />
 
-<h2>3. Scripting the button behavior</h2>
-<p>Next, we need the button to trigger an action when it's clicked. To do this, we'll need JavaScript</p>
+  <h2>3. Scripting the button behavior</h2>
+  <p>
+    Next, we need the button to trigger an action when it's clicked. To do this,
+    we'll need JavaScript
+  </p>
 
-<p>In our case, we're going to listen for a button click and toggle a class of 'nav-open' on the body tag. From there, we'll leverage the presence of this class in CSS.</p>
+  <p>
+    In our case, we're going to listen for a button click and toggle a class of
+    'nav-open' on the body tag. From there, we'll leverage the presence of this
+    class in CSS.
+  </p>
 
-<p><b>NOTE:</b> many online examples do the same thing except they'll add class names on the nav tag and/or button. I prefer adding a class to the body, as it's easier to write styles that change the look of anything in the page when the menu is open.</p>
+  <p>
+    <b>NOTE:</b> many online examples do the same thing except they'll add class
+    names on the nav tag and/or button. I prefer adding a class to the body, as it's
+    easier to write styles that change the look of anything in the page when the
+    menu is open.
+  </p>
 
-<p>Create a script tag at the bottom of the page right before the body tag and add this code:</p>
+  <p>
+    Create a script tag at the bottom of the page right before the body tag and
+    add this code:
+  </p>
 
-<Code
-  code={`<script>
+  <Code
+    code={`<script>
 window.onload = () => {
     const toggleNavBtn = document.getElementById('toggle-nav-btn');
     toggleNavBtn.innerHTML = '&#9776;';
 };
 </script></Code>`}
-  lang="html"
-/>
+    lang="html"
+  />
 
-<p>Here, we're telling JavaScript not to execute this code until everything within the browser window has loaded. Then, within the "{ }" we're identifying the button to JavaScript and telling it to inject a special character--the hamburger icon, into the button. If you refresh your page in the browser, you should see this icon in the button.</p>
+  <p>
+    Here, we're telling JavaScript not to execute this code until everything
+    within the browser window has loaded. Then, within the "{}" we're
+    identifying the button to JavaScript and telling it to inject a special
+    character--the hamburger icon, into the button. If you refresh your page in
+    the browser, you should see this icon in the button.
+  </p>
 
-<p>Now, we'll add an <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a> that will listen for the click and toggle the body's class. Change the contents of your script tag to this:</p>
+  <p>
+    Now, we'll add an <a
+      href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener"
+      >addEventListener</a
+    > that will listen for the click and toggle the body's class. Change the contents
+    of your script tag to this:
+  </p>
 
-<Code
-  code={`<script>
+  <Code
+    code={`<script>
     // Perform this after the window has loaded
     window.onload = () => {
       // First, tell JavaScript to remember which DOM element (in this case, a button) to reference (by id)
@@ -105,24 +154,47 @@ window.onload = () => {
       });
     };
   </script></Code>`}
-  lang="html"
-/>
+    lang="html"
+  />
 
-<p>What we've added here is for the toggleNavBtn to listen for a user interaction--a click. If the user has clicked the button, we toggle a class of 'nav-open' to the document's body tag (this means we add the class only if it's not already there. If the class name is already in-place, we remove it).</p>
-<p>Lastly, we check for the presence of 'nav-open' to determine whether the button should show a hamburger icon or a close icon.</p>
+  <p>
+    What we've added here is for the toggleNavBtn to listen for a user
+    interaction--a click. If the user has clicked the button, we toggle a class
+    of 'nav-open' to the document's body tag (this means we add the class only
+    if it's not already there. If the class name is already in-place, we remove
+    it).
+  </p>
+  <p>
+    Lastly, we check for the presence of 'nav-open' to determine whether the
+    button should show a hamburger icon or a close icon.
+  </p>
 
-<h2>4. Styling our page when 'body.nav-open'</h2>
-<p>In the <a href={"/tutorials/navigation/"}>previous tutorial</a> the navigation stacked vertically at mobile, however, we now want it to remain hidden until the user triggers the button and body.nav-open is in-place.</p>
+  <h2>4. Styling our page when 'body.nav-open'</h2>
+  <p>
+    In the <a href={"/tutorials/navigation/"}>previous tutorial</a> the navigation
+    stacked vertically at mobile, however, we now want it to remain hidden until
+    the user triggers the button and body.nav-open is in-place.
+  </p>
 
-<p>In addition to that, in order to animate, we need to transition from one height value to another. While we know the height should be 0 when the menu is closed, we'd have to set a fixed height when the menu is open. This means that if we change the number of menu items in the future, we'd have to manually change the fixed height in CSS every time.</p>
+  <p>
+    In addition to that, in order to animate, we need to transition from one
+    height value to another. While we know the height should be 0 when the menu
+    is closed, we'd have to set a fixed height when the menu is open. This means
+    that if we change the number of menu items in the future, we'd have to
+    manually change the fixed height in CSS every time.
+  </p>
 
-<p>Instead of a hard value for the maximum height, we'll convert the #primary-nav into a CSS grid and transition the grid-template-rows from 0fr to 1fr. When the template rows are 1fr, it'll simply resize to our menu, regardless of the number of items within it.</p>
+  <p>
+    Instead of a hard value for the maximum height, we'll convert the
+    #primary-nav into a CSS grid and transition the grid-template-rows from 0fr
+    to 1fr. When the template rows are 1fr, it'll simply resize to our menu,
+    regardless of the number of items within it.
+  </p>
 
-<p>We'll add the following styling to the media query:</p>
-
+  <p>We'll add the following styling to the media query:</p>
 
   <Code
-  code={`@media (max-width: 767px) {
+    code={`@media (max-width: 767px) {
     #primary-nav {
       display: grid;
       grid-template-rows: 0fr;
@@ -141,18 +213,27 @@ window.onload = () => {
       display: block; /* display button beneath breakpoint */
     }
   }`}
-  lang="css"
-/>
+    lang="css"
+  />
 
+  <p>
+    Notice that the #primary-nav only has grid-template-rows of 1fr when the
+    body tag has .nav-open applied.
+  </p>
 
-<p>Notice that the #primary-nav only has grid-template-rows of 1fr when the body tag has .nav-open applied.</p>
+  <h2>Final Result</h2>
 
-<h2>Final Result</h2>
+  <p>You should now see a responsive navigation.</p>
+  <p>
+    <a
+      class="button"
+      target="_blank"
+      href={"/tutorials/responsive-navigation/example"}>View the example</a
+    >
 
-<p>You should now see a responsive navigation.</p> 
-<p><a class="button" target="_blank" href={"/tutorials/responsive-navigation/example"}>View the example</a>
-
-<p>As for next steps, you should externalize the JavaScript into its own file before cloning your page template. </p>
-
-</p>
+    <p>
+      As for next steps, you should externalize the JavaScript into its own file
+      before cloning your page template.
+    </p>
+  </p>
 </Layout>

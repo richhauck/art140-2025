@@ -1,85 +1,101 @@
 ---
-const title = "Images and Icons";
+const title = "Stock Images and Icons";
 import Layout from "../../layouts/Layout.astro";
-import { Image, SquareDashed, Library, Bot, Palette, PencilRuler } from '@lucide/astro';
+import {
+  Image,
+  SquareDashed,
+  Library,
+  Bot,
+  Palette,
+  PencilRuler,
+} from "@lucide/astro";
 ---
 
 <Layout title={title}>
-<div class="cards">
-<section>
-  <h2><Image/> Free Stock Images</h2>
-  <ul>
-    <li><a href="https://search.creativecommons.org/">Creative Commons</a></li>
-    <li><a href="https://www.pexels.com/">Pexels</a></li>
-    <li><a href="https://unsplash.com/">Unsplash</a></li>
-    <li><a href="https://openverse.org/">Openverse</a></li>
-  </ul>
-</section>
-<section>
-  <h2><SquareDashed/> Image Placeholders</h2>
-  <ul>
-    <li><a href="https://placehold.co/">Placehold</a></li>
-    <li><a href="https://placekitten.com/">placekitten</a></li>
-    <li><a href="http://pravatar.cc/">Pravatar</a></li>
-    <li><a href="https://picsum.photos/">Picsum</a></li>
-  </ul>
-</section>
+  <div class="cards">
+    <section>
+      <h2><Image /> Free Stock Images</h2>
+      <ul>
+        <li>
+          <a href="https://search.creativecommons.org/">Creative Commons</a>
+        </li>
+        <li><a href="https://www.pexels.com/">Pexels</a></li>
+        <li><a href="https://unsplash.com/">Unsplash</a></li>
+        <li><a href="https://openverse.org/">Openverse</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2><SquareDashed /> Image Placeholders</h2>
+      <ul>
+        <li><a href="https://placehold.co/">Placehold</a></li>
+        <li><a href="https://placekitten.com/">placekitten</a></li>
+        <li><a href="http://pravatar.cc/">Pravatar</a></li>
+        <li><a href="https://picsum.photos/">Picsum</a></li>
+      </ul>
+    </section>
 
-<section>
-  <h2><Library/> Icon Libraries</h2>
-  <ul>
-    <li><a href="https://fontawesome.com/">Font Awesome</a></li>
-    <li><a href="https://material.io/icons/">Google Material Icons</a></li>
-    <li><a href="https://lucide.dev/">Lucide</a></li>
-    <li><a href="https://zurb.com/playground/foundation-icon-fonts-3">Foundation Icons</a></li>
-    <li><a href="https://feathericons.com/">Feather Icons</a></li>
-    <li><a href="https://thenounproject.com/">The Noun Project (be aware of license)</a>
-    </li>
-    <li><a href="https://www.snoweb-svg.com/en/">Snoweb</a></li>
-    <li><a href="https://www.svgrepo.com/">SVG Repo</a></li>
-    <li><a href="https://symbols.wentin.net/">Symbols to Copy</a></li>
-    <li><a href="https://icondash.com/">IconDash</a></li>
-  </ul>
-</section>
+    <section>
+      <h2><Library /> Icon Libraries</h2>
+      <ul>
+        <li><a href="https://fontawesome.com/">Font Awesome</a></li>
+        <li><a href="https://material.io/icons/">Google Material Icons</a></li>
+        <li><a href="https://lucide.dev/">Lucide</a></li>
+        <li>
+          <a href="https://zurb.com/playground/foundation-icon-fonts-3"
+            >Foundation Icons</a>
+        </li>
+        <li><a href="https://feathericons.com/">Feather Icons</a></li>
+        <li>
+          <a href="https://thenounproject.com/"
+            >The Noun Project (be aware of license)</a
+          >
+        </li>
+        <li><a href="https://www.snoweb-svg.com/en/">Snoweb</a></li>
+        <li><a href="https://www.svgrepo.com/">SVG Repo</a></li>
+        <li><a href="https://symbols.wentin.net/">Symbols to Copy</a></li>
+        <li><a href="https://icondash.com/">IconDash</a></li>
+      </ul>
+    </section>
 
-<section>
-  <h2><Bot/>AI-Generated Images</h2>
-  <ul>
-    <li><a href="https://stablediffusionweb.com/">Stabled Diffusion</a></li>
-    <li><a href="https://loremfaces.com/">LoremFaces</a></li>
-    <li>
-      <a href="https://www.adobe.com/sensei/generative-ai/firefly.html"
-        >Adobe Firefly</a
-      >
-    </li>
-  </ul>
-</section>
+    <section>
+      <h2><Bot />AI-Generated Images</h2>
+      <ul>
+        <li><a href="https://stablediffusionweb.com/">Stabled Diffusion</a></li>
+        <li><a href="https://loremfaces.com/">LoremFaces</a></li>
+        <li>
+          <a href="https://www.adobe.com/sensei/generative-ai/firefly.html"
+            >Adobe Firefly</a
+          >
+        </li>
+      </ul>
+    </section>
 
-<section>
-  <h2><Palette/> Color Palette</h2>
-  <ul>
-    <li><a href="http://colormind.io/">Colormind</a></li>
-    <li><a href="https://coolors.co/">Coolors</a></li>
-    <li>
-      <a href="https://meodai.github.io/poline/"
-        >Poline (color palette generator)</a
-      >
-    </li>
-    <li><a href="https://themer.dev/">Themer</a></li>
-    <li><a href="https://color.adobe.com">Adobe Color</a></li>
-  </ul>
-</section>
-<section>
-  <h2><PencilRuler/> Tools:</h2>
-  <ul>
-    <li><a href="https://realfavicongenerator.net">Favicon Generator</a></li>
-    <li><a href="http://www.svgs.us/">SVGSUS</a></li>
-    <li>
-      <a href="http://creativedo.co/FontAwesomePS">Font Awesome PS</a> - Adobe
-      Photoshop plugin for icons
-    </li>
-  </ul>
-</section>
-
-</div>
+    <section>
+      <h2><Palette /> Color Palette</h2>
+      <ul>
+        <li><a href="http://colormind.io/">Colormind</a></li>
+        <li><a href="https://coolors.co/">Coolors</a></li>
+        <li>
+          <a href="https://meodai.github.io/poline/"
+            >Poline (color palette generator)</a
+          >
+        </li>
+        <li><a href="https://themer.dev/">Themer</a></li>
+        <li><a href="https://color.adobe.com">Adobe Color</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2><PencilRuler /> Tools:</h2>
+      <ul>
+        <li>
+          <a href="https://realfavicongenerator.net">Favicon Generator</a>
+        </li>
+        <li><a href="http://www.svgs.us/">SVGSUS</a></li>
+        <li>
+          <a href="http://creativedo.co/FontAwesomePS">Font Awesome PS</a> - Adobe
+          Photoshop plugin for icons
+        </li>
+      </ul>
+    </section>
+  </div>
 </Layout>

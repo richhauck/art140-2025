@@ -1,23 +1,25 @@
 ---
 const title = "Responsive Navigation Tutorial";
 import Layout from "../../../layouts/Layout.astro";
-import { Code } from 'astro:components';
+import { Code } from "astro:components";
 ---
 
 <Layout title={title}>
-  
-<p>
-  In this example, we'll look at structuring the site navigation of a
-  page.
-</p>
-<p><a class="button" target="_blank" href={"/tutorials/navigation/example"}>View the example</a>
-</p>
-<h2>1. Setting the Structure</h2>
-<p>To start, we'll organize the HTML like this:</p>
+  <p>
+    In this example, we'll look at structuring the site navigation of a page.
+  </p>
+  <p>
+    <a
+      class="button"
+      target="_blank"
+      href={"/tutorials/navigation/example.html"}>View the example</a
+    >
+  </p>
+  <h2>1. Setting the Structure</h2>
+  <p>To start, we'll organize the HTML like this:</p>
 
-
-<Code
-  code={`<nav id="primary-nav">
+  <Code
+    code={`<nav id="primary-nav">
   <ul>
     <li><a href="#">Home</a></li>
     <li><a href="#">About</a></li>
@@ -25,80 +27,82 @@ import { Code } from 'astro:components';
     <li><a href="#">Contact</a></li>
   </ul>
 </nav>`}
-  lang="html"
-/>
+    lang="html"
+  />
 
-<p>
-  Instead of using a div tag, we'll use the
-  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav"
-    >nav tag</a
-  >, as this element informs search engines that this represents a piece of site
-  navigation. Our site links reside in a list to further reinforce their
-  relatedness.
-</p>
-<p>
-  We've given this nav tag a unique id of "primary-nav". This will assist in
-  styling, as you can have multiple nav tags in a page, but we want to target
-  this one specifically.
-</p>
+  <p>
+    Instead of using a div tag, we'll use the
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav"
+      >nav tag</a
+    >, as this element informs search engines that this represents a piece of
+    site navigation. Our site links reside in a list to further reinforce their
+    relatedness.
+  </p>
+  <p>
+    We've given this nav tag a unique id of "primary-nav". This will assist in
+    styling, as you can have multiple nav tags in a page, but we want to target
+    this one specifically.
+  </p>
 
-<h2>2. Styling the Navigation</h2>
+  <h2>2. Styling the Navigation</h2>
 
-<p>We'll start by eliminating the native padding on our navigation's list:</p>
+  <p>We'll start by eliminating the native padding on our navigation's list:</p>
 
-<Code
-  code={`#primary-nav ul { padding-left: 0; }`}
-  lang="css"
-/>
+  <Code code={`#primary-nav ul { padding-left: 0; }`} lang="css" />
 
-<p>
-  Next, we make any li tag <b>display: inline-block</b>, as this will have the
-  list items sit next to one another horizontally. Setting
-  <b>list-style: none;</b> removes the dot before the list items.
-</p>
+  <p>
+    Next, we make any li tag <b>display: inline-block</b>, as this will have the
+    list items sit next to one another horizontally. Setting
+    <b>list-style: none;</b> removes the dot before the list items.
+  </p>
 
-<Code
-  code={`#primary-nav li { 
+  <Code
+    code={`#primary-nav li { 
   list-style: none; 
   display: inline-block;
 }`}
-  lang="css"
-/>
+    lang="css"
+  />
 
-<p>
-  For the links within, setting them as <b>display: inline-block</b> enables vertical
-  padding. Note that we set the padding on the a tag and not the li tag, as this
-  will increase the hit state of the link.
-</p>
+  <p>
+    For the links within, setting them as <b>display: inline-block</b> enables vertical
+    padding. Note that we set the padding on the a tag and not the li tag, as this
+    will increase the hit state of the link.
+  </p>
 
-<Code
-  code={`#primary-nav a { 
+  <Code
+    code={`#primary-nav a { 
   background-color: cornflowerblue;
   display: block; 
   padding: 1em;
 } `}
-  lang="css"
-/>
+    lang="css"
+  />
 
-<h2>3. Handling Responsiveness</h2>
+  <h2>3. Handling Responsiveness</h2>
 
-<p>
-  To have the navigation stack at mobile, we can simply reset the list item's
-  <b>display</b> property from <b>inline</b> to <b>block</b>.
-</p>
+  <p>
+    To have the navigation stack at mobile, we can simply reset the list item's
+    <b>display</b> property from <b>inline</b> to <b>block</b>.
+  </p>
 
-<Code
-  code={`@media (max-width: 767px) { 
+  <Code
+    code={`@media (max-width: 767px) { 
   #primary-nav li { 
   display:block; 
 }`}
-  lang="css"
-/>
+    lang="css"
+  />
 
-<h2>4. Final Result</h2>
+  <h2>4. Final Result</h2>
 
-<p><a class="button" target="_blank" href={"/tutorials/navigation/example"}>View the example</a>
-</p>
-<p>In the next <a href={"/tutorials/responsive-navigation/"}>tutorial</a>, we'll add a button that toggles the display of the menu.</p>
-
+  <p>
+    <a class="button" target="_blank" href="/tutorials/navigation/example.html"
+      >View the example</a
+    >
+  </p>
+  <p>
+    In the next <a href={"/tutorials/responsive-navigation/"}>tutorial</a>,
+    we'll add a button that toggles the display of the menu.
+  </p>
 </Layout>

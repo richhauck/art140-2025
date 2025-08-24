@@ -1,113 +1,206 @@
 ---
 const title = "Working with images";
+import { Lightbulb } from "@lucide/astro";
 import Layout from "../../../layouts/Layout.astro";
-import { Code } from 'astro:components';
+import { Code } from "astro:components";
 ---
 
 <Layout title={title}>
-<h2>Files Formats</h2>
-<p>Below are different image file formats compatible with a browser. Under most circumstances, I recommend saving images out as WebP, which is the most modern format in this list.</p>
-<table>
-  <tr>
-    <th>Format</th>
-    <th>Use</th>
-  </tr>
-  <tr>
-    <td>JPG</td>
-    <td><strong>Joint Photographic Experts Group</strong>: used for optimizing photographs (Tip: Remember "P" stands for photographic)</td>
-  </tr>
-  <tr>
-    <td>PNG</td>
-    <td><strong>Portable Network Graphics</strong>. Replacement for GIF. Supports transparency. Works well for flat colors. Can be used for Photographs, but yields a larger file size than JPG</td>
-  </tr>
-  <tr>
-    <td>GIF</td>
-    <td><strong>Graphics Interchange Format</strong>. Raster file format. 8 bits per pixel and can contain 256 indexed colors--supports animation. Unless animating, PNG is a superior format.</td>
-  </tr>
-  <tr>
-    <td>SVG</td>
-    <td><strong>Scalable Vector Graphics</strong>. XML markup. Can be embedded inline or referenced as the src of an image tag.</td>
-  </tr>
-  <tr>
-    <td>WebP</td>
-    <td>Google-developed Replacement for JPG, PNG, and GIF.</td>
-  </tr>
-  <tr>
-    <td>AVIF</td>
-    <td><strong>AV1 Image File Format</strong> Better optimization than JPEG, can support multiple color spaces</td>
-  </tr>
-</table>
-<hr>
-<h2>Placing into HTML</h2>
-<h3>Image Tag</h3>
-<Code code={`<img src="flowers.jpg" alt="picture of flowers" />`} lang="html"/>
+  <h2>Files Formats</h2>
+  <p>
+    Below are different image file formats compatible with a browser. While AVIF
+  </p>
+  <table>
+    <tr>
+      <th>Format</th>
+      <th>Use</th>
+    </tr>
+    <tr>
+      <td>WebP</td>
+      <td
+        >Google-developed Replacement for JPG, PNG, and GIF. <a
+          href="https://developers.google.com/speed/webp">See WebP page</a
+        >. Has <a
+          href="https://helpx.adobe.com/photoshop/kb/support-webp-image-format.html"
+          >Photoshop support</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <td>AVIF</td>
+      <td
+        ><strong>AV1 Image File Format</strong> Supports high dynamic range (HDR),
+        wide color gamut (WCG), and transparency, but is not natively supported in
+        Photoshop or Figma</td
+      >
+    </tr>
+    <tr>
+      <td>SVG</td>
+      <td
+        ><strong>Scalable Vector Graphics</strong>. XML markup. Can be embedded
+        inline or referenced as the src of an image tag.</td
+      >
+    </tr>
+    <tr>
+      <td>JPG</td>
+      <td
+        ><strong>Joint Photographic Experts Group</strong>: used for optimizing
+        photographs (Tip: Remember "P" stands for photographic)</td
+      >
+    </tr>
+    <tr>
+      <td>PNG</td>
+      <td
+        ><strong>Portable Network Graphics</strong>. Replacement for GIF.
+        Supports transparency. Works well for flat colors. Can be used for
+        Photographs, but yields a larger file size than JPG</td
+      >
+    </tr>
+    <tr>
+      <td>GIF</td>
+      <td
+        ><strong>Graphics Interchange Format</strong>. Raster file format. 8
+        bits per pixel and can contain 256 indexed colors--supports animation.
+        Unless animating, PNG is a superior format.</td
+      >
+    </tr>
+  </table>
+  <hr />
+  <h2>Placing into HTML</h2>
+  <h3>Image Tag</h3>
+  <Code
+    code={`<img src="flowers.jpg" alt="picture of flowers" />`}
+    lang="html"
+  />
 
-<h3>Figure Tag</h3>
-<p>Provides structure to include a caption.</p>
+  <h3>Figure Tag</h3>
+  <p>Provides structure to include a caption.</p>
 
-<Code code={`<figure>
+  <Code
+    code={`<figure>
   <img src="flowers.jpg" alt="flowers">
   <figcaption>Picture of flowers in Washington Square</figcaption>
-</figure>`} lang="html"/>
-<p><a class="button" href={"/lessons/working-with-images/figure/"} target="_blank">See Example</a></p>
-<hr>
-<h3>Picture Tag</h3>
-<p>A group of images based on different source definitions. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">MDN's Picture element documentation</a>.</p>
-  
-<Code code={`<picture>
-     <source media="(min-width: 800px)" srcset="flowers-800.jpg">
-     <source media="(min-width: 600px)" srcset="flowers-600.jpg">
-     <source srcset="flowers-320.jpg">
-     <img srcset="flowers.jpg" alt="This picture loads on non-supporting browsers.">
-    </picture>`} lang="html"/>
-  
-    <p><a class="button" href={"/lessons/working-with-images/picture/"} target="_blank">See Example</a></p>
-  
+</figure>`}
+    lang="html"
+  />
+  <p>
+    <a
+      class="button"
+      href={"/lessons/working-with-images/figure/"}
+      target="_blank">See Example</a
+    >
+  </p>
+  <hr />
+  <h3>Picture Tag</h3>
+  <p>
+    A group of images based on different source definitions. See <a
+      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture"
+      >MDN's Picture element documentation</a
+    >.
+  </p>
 
-<section>
+  <Code
+    code={`<picture>
+  <source media="(min-width: 800px)" srcset="flowers-800.jpg">
+  <source media="(min-width: 600px)" srcset="flowers-600.jpg">
+  <source srcset="flowers-320.jpg">
+  <img srcset="flowers.jpg" alt="This picture loads on non-supporting browsers.">
+</picture>`}
+    lang="html"
+  />
+
+  <p>
+    <a
+      class="button"
+      href="/lessons/working-with-images/picture.html"
+      target="_blank">See Example</a
+    >
+  </p>
+
+  <section>
     <h2>Scalable Images</h2>
-    <p>This technique relies upon the parent container scaling responsively. This basically ensures that the child image doesn't break out of the container. The <code>height</code> property is set to "auto" to ensure the image's aspect ratio isn't compressed or stretched. You may wish to also set the <code>max-width</code> property to ensure the image doesn't exceed the container size.</p>
+    <p>
+      This technique relies upon the parent container scaling responsively. This
+      basically ensures that the child image doesn't break out of the container.
+      The <code>height</code> property is set to "auto" to ensure the image's aspect
+      ratio isn't compressed or stretched. You may wish to also set the <code
+        >max-width</code
+      > property to ensure the image doesn't exceed the container size.
+    </p>
     <p><b>In CSS:</b></p>
-<Code code={`img{
-      width: 100%;
-      height: auto;
-    }`} lang="css"/>
-
+    <Code
+      code={`img{
+    width: 100%;
+    height: auto;
+}`}
+      lang="css"
+    />
   </section>
-  
+
   <section>
     <h2>Responsive Background Image</h2>
-    <p>This technique utilizes media queries to define a different background image based on browser properties.</p>
+    <p>
+      This technique utilizes media queries to define a different background
+      image based on browser properties.
+    </p>
     <p><b>In CSS:</b></p>
-    <Code code={`#background{
-      background: url(flowers-800.jpg) no-repeat;
-    }
-    @media (max-width: 800px) {
-      #background{
-        background: url(flowers-600.jpg) no-repeat;
-      }
-    }`} lang="css"/>
-  
-    <p><a class="button" href={"/lessons/working-with-images/background-image/"} target="_blank">See Example</a></p>
+    <Code
+      code={`#background{
+  background: url(flowers-800.jpg) no-repeat;
+}
+@media (max-width: 800px) {
+  #background{
+    background: url(flowers-600.jpg) no-repeat;
+  }
+}`}
+      lang="css"
+    />
+
+    <p>
+      <a
+        class="button"
+        href="/lessons/working-with-images/background-image.html"
+        target="_blank">See Example</a
+      >
+    </p>
   </section>
 
   <section>
     <h2>100% Scale Background Image</h2>
     <p>This yields a background image that always fits within the browser.</p>
     <p><b>In CSS:</b></p>
-        <Code code={`html{
-    background: url(images/your-image.webp) no-repeat center center fixed;
-    background-size: cover;
-}`} lang="css"/>
-  
-    <p><a class="button" href={"/lessons/working-with-images/background-100/"} target="_blank">See Example</a></p>
+    <Code
+      code={`html{
+  background: url(images/your-image.webp) no-repeat center center fixed;
+  background-size: cover;
+}`}
+      lang="css"
+    />
+
+    <p>
+      <a
+        class="button"
+        href="/lessons/working-with-images/background-100.html"
+        target="_blank">See Example</a
+      >
+    </p>
   </section>
-  
+
   <aside>
-    <h3>Tips:</h3>
+    <h3><Lightbulb /> Tips:</h3>
     <ul>
-      <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG">Scaleable Vector Graphics (SVG)</a> might be a better alternative to JPG or PNG when dealing with vector graphics.</li>
-      <li><a href="https://developers.google.com/speed/webp">WebP</a> is an image format that is 26% smaller than PNGs and up to 34% smaller than JPEG files. <a href="https://helpx.adobe.com/photoshop/kb/support-webp-image-format.html">WebP is supported by Adobe Photoshop</a>.</li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/SVG"
+          >Scaleable Vector Graphics (SVG)</a
+        > might be a better alternative to JPG or PNG when dealing with vector graphics.
+      </li>
+      <li>
+        <a href="https://developers.google.com/speed/webp">WebP</a> is an image format
+        that is 26% smaller than PNGs and up to 34% smaller than JPEG files. <a
+          href="https://helpx.adobe.com/photoshop/kb/support-webp-image-format.html"
+          >WebP is supported by Adobe Photoshop</a
+        >.
+      </li>
     </ul>
   </aside>
 </Layout>

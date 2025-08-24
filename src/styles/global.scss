@@ -1,5 +1,6 @@
 :root {
   --red: #9e1b31;
+  --darkRed: #49141a;
   --lightRed: #f7a8b0;
   --blue: #3070ab;
   --headertextcolor: #353843;
@@ -10,7 +11,7 @@
   --borderColor: #dcdee6;
   --basePadding: 1em;
   --headerHeight: 120px;
-  --transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+  --transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 * {
   box-sizing: border-box;
@@ -28,6 +29,7 @@ body {
 }
 h1 {
   color: var(--red);
+  line-height: 2rem;
 }
 h2,
 h3,
@@ -186,15 +188,18 @@ svg.lucide {
 
 .button {
   color: #fff;
-  &:link,
-  &:visited {
-    background-color: var(--red);
-  }
-  &:hover {
-    background-color: var(--blue);
-  }
   padding: 0.3em 0.7em;
   border-radius: 4px;
+}
+.button:link,
+.button:visited {
+  color: #fff;
+  text-decoration: none;
+  background-color: var(--red);
+}
+.button:hover {
+  text-decoration: none;
+  background-color: var(--darkRed);
 }
 
 aside {
