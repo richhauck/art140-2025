@@ -8,7 +8,9 @@ import Layout from "../../layouts/Layout.astro";
   <p>
     Working with a design you create in Figma, you will build a single HTML page
     promoting the attractions and sites around Central Pennsylvania. You can use
-    the copy here: <a href={"/assets/project-1-content.pdf"} target="_blank"
+    the copy here: <a
+      href={`${import.meta.env.BASE_URL}assets/project-1-content.pdf`}
+      target="_blank"
       >https://richhauck.com/art140/assets/project-1-content.pdf</a
     >. You will be responsible for establishing the color palette, images,
     branding, and identity for the page.
