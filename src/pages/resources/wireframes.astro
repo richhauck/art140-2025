@@ -2,6 +2,7 @@
 const title = "Wireframes";
 import Layout from "../../layouts/Layout.astro";
 import { Lightbulb } from "@lucide/astro";
+import wireframe from "../../assets/images/starting-a-project/wireframe.png";
 ---
 
 <Layout title={title}>
@@ -16,7 +17,7 @@ import { Lightbulb } from "@lucide/astro";
   <p>
     <em><b>A rough example:</b></em>
   </p>
-  <img src="/images/starting-a-project/wireframe.png" alt="sample wireframe" />
+  <img src={wireframe.src} alt="sample wireframe" />
 
   <aside>
     <h3><Lightbulb /> Tips when making wireframes:</h3>

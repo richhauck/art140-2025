@@ -4,12 +4,14 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title={title}>
-<h2>CSS Box model exercise</h2>
-<p>
-  Recreate the following image in HTML and CSS. Feel free to modify the colors
-  or styling, but the finished product should contain three overlapping divs
-  (hint: look into z-index).
-</p>
-<img src={"/images/exercises/z-index.webp"} alt="z-index layout">
-
+  <h2>CSS Box model exercise</h2>
+  <p>
+    Recreate the following image in HTML and CSS. Feel free to modify the colors
+    or styling, but the finished product should contain three overlapping divs
+    (hint: look into z-index).
+  </p>
+  <img
+    src={`${import.meta.env.BASE_URL}images/exercises/z-index.webp`}
+    alt="z-index layout"
+  />
 </Layout>
