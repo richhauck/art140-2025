@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>z-Index</title>
+    <style>
+      #holder {
+        width: 300px;
+        height: 300px;
+        border: 5px solid #ccc;
+        margin: 0 auto;
+        position: relative;
+      }
+      #holder > div {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+      #one {
+        z-index: 1;
+        top: 50px;
+        left: 50px;
+        background-color: rgb(255, 0, 0);
+      }
+      #two {
+        z-index: 2;
+        top: 100px;
+        left: 100px;
+        background-color: rgb(0, 255, 0);
+      }
+      #three {
+        z-index: 3;
+        top: 150px;
+        left: 150px;
+        background-color: rgb(0, 0, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>z-Index Example</h1>
+    <div id="holder">
+      <div id="one"></div>
+      <div id="two"></div>
+      <div id="three"></div>
+    </div>
+  </body>
+</html>

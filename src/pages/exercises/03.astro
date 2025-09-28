@@ -1,18 +1,21 @@
 ---
 const title = "Exercises";
 import Layout from "../../layouts/Layout.astro";
+import { Code } from "astro:components";
 ---
 
 <Layout title={title}>
-<p>Show an in-progress page for Project 1 using Flexbox.</p>
+  <p>
+    Using the HTML code below, recreate the layout displayed in the screen
+    capture.
+  </p>
+  <img
+    src={`${import.meta.env.BASE_URL}images/exercises/exercise-3.webp`}
+    alt="z-index layout"
+  />
 
-<!--
-<p>
-  Using the HTML code below, recreate the layout displayed in the screen
-  capture.
-</p>
-<img src="{{ "/images/exercises/exercise-3.webp" | url }}" alt="exercise 3
-layout"> {% highlight "html" %}
+  <Code
+    code={`
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -63,7 +66,7 @@ layout"> {% highlight "html" %}
     </main>
   </body>
 </html>
-{% endhighlight %}
--->
-
+`}
+    lang="html"
+  />
 </Layout>

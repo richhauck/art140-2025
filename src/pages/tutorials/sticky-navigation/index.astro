@@ -1,0 +1,43 @@
+---
+const title = "Sticky Navigation/Active State Tutorial";
+import Layout from "../../../layouts/Layout.astro";
+import { Code } from "astro:components";
+---
+
+<Layout title={title}>
+  <p>
+    In a multipage site, it's helpful for users to apply a custom style to the
+    link in the navigation representing the current page.
+  </p>
+
+  <Code
+    code={`<nav id="primary-nav">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a class="active" href="#">About</a></li>
+    ...
+  </ul>
+</nav>`}
+    lang="html"
+  />
+  <p>
+    <a
+      class="button"
+      target="_blank"
+      href={"/tutorials/navigation/example.html"}>View the example</a
+    >
+  </p>
+  <p>
+    Instead of using a div tag, we'll use the
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav"
+      >nav tag</a
+    >, as this element informs search engines that this represents a piece of
+    site navigation. Our site links reside in a list to further reinforce their
+    relatedness.
+  </p>
+  <p>
+    We've given this nav tag a unique id of "primary-nav". This will assist in
+    styling, as you can have multiple nav tags in a page, but we want to target
+    this one specifically.
+  </p>
+</Layout>
