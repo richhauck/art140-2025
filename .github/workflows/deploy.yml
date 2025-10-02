@@ -1,0 +1,34 @@
+name: Deploy to FTP
+
+on:
+  push:
+    branches:
+      - main # Trigger deployment only on push to the 'main' branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18" # Optional if you need to build your project
+
+      - name: Install dependencies
+        run: npm install # Optional if you have a build step
+
+      - name: Build the site
+        run: npm run build # Optional if your site requires a build step, otherwise skip
+
+      - name: Deploy to FTP server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/ # Change to your build/output directory (if you have one)
+          server-dir: /public_html/art140/ # Change to the path where the site should be uploaded

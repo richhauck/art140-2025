@@ -6,7 +6,9 @@ import { Code } from "astro:components";
 
 <Layout title={title}>
   <p>
-    Building off of the <a href={"/tutorials/navigation/"}>previous tutorial</a
+    Building off of the <a
+      href=`${import.meta.env.BASE_URL}assets/navigation.html`
+      >previous tutorial</a
     >, we'll add a button that toggles the display of the menu.
   </p>
   <p>
@@ -18,7 +20,7 @@ import { Code } from "astro:components";
     <a
       class="button"
       target="_blank"
-      href=`${import.meta.env.BASE_URL}tutorials/responsive-navigation/example.html`
+      href=`${import.meta.env.BASE_URL}assets/responsive-navigation.html`
       >View the example</a
     >
   </p>
@@ -172,9 +174,10 @@ window.onload = () => {
 
   <h2>4. Styling our page when 'body.nav-open'</h2>
   <p>
-    In the <a href={"/tutorials/navigation/"}>previous tutorial</a> the navigation
-    stacked vertically at mobile, however, we now want it to remain hidden until
-    the user triggers the button and body.nav-open is in-place.
+    In the <a href=`${import.meta.env.BASE_URL}tutorials/navigation/`
+      >previous tutorial</a
+    > the navigation stacked vertically at mobile, however, we now want it to remain
+    hidden until the user triggers the button and body.nav-open is in-place.
   </p>
 
   <p>
@@ -229,7 +232,7 @@ window.onload = () => {
     <a
       class="button"
       target="_blank"
-      href=`${import.meta.env.BASE_URL}tutorials/responsive-navigation/example.html`
+      href=`${import.meta.env.BASE_URL}assets/responsive-navigation.html`
       >View the example</a
     >
 
