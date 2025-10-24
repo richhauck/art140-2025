@@ -1,0 +1,25 @@
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  background-color: green;
+  display: inline-block;
+}
+nav li a {
+  padding: 10px;
+  display: inline-block;
+  width: 200px;
+  background-color: yellow;
+}
+
+body#about {
+  background-color: aquamarine;
+}
+body#home nav li:nth-child(1) a,
+body#about nav li:nth-child(2) a,
+body#contact nav li:nth-child(3) a {
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: darkgoldenrod;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Assignment 3</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <style>
+      /* Reusable value */
+      :root {
+        --base-padding: 5px;
+        --my-shadow: drop-shadow(0 5px 12px #000);
+      }
+      body {
+        background-color: #666;
+      }
+      /* Ensures image fits within it's parent container */
+      img {
+        width: 100%;
+        height: auto; /* Respect aspect ratio of image */
+      }
+      body > * {
+        border: 1px dashed #000;
+      }
+      #site-header {
+        padding: var(--base-padding);
+        background-color: #fff;
+        margin-bottom: 20px;
+        filter: var(--my-shadow);
+        text-align: center;
+      }
+
+      main {
+        max-width: 1440px;
+        background-color: #fff;
+        margin: 0 auto;
+        filter: var(--my-shadow);
+        border-radius: 10px;
+        padding: var(--base-padding);
+      }
+
+      .row {
+        display: flex;
+        gap: var(--base-padding);
+        background-color: lightblue;
+        max-width: 1440px;
+        margin: 0 auto;
+        border: 1px dashed green;
+      }
+
+      .row > div {
+        border: 1px solid black;
+        min-height: 100px;
+      }
+      /* All flex children share space */
+      .row.grow > div {
+        flex-grow: 1;
+      }
+      /* "Utility Classes" */
+      .col-25 {
+        width: 25%;
+      }
+      .col-33 {
+        width: 33.3%;
+      }
+      .col-50 {
+        width: 50%;
+      }
+      .col-100 {
+        width: 100%;
+      }
+      /* Specific Widths */
+      .col-a {
+        width: 42px;
+      }
+      .col-b {
+        width: calc(100% - 42px);
+      }
+    </style>
+  </head>
+  <body>
+    <header id="site-header">
+      <div class="row">
+        <div class="col-100">
+          header: col-100<br />This entire layout is 1440px wide
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="content">
+        <div class="row grow">
+          <div><img src="https://placehold.co/600x400" alt="" /></div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+        </div>
+        <div class="row">
+          <div class="col-a">fdg</div>
+          <div class="col-b">sdfg</div>
+        </div>
+
+        <div class="row">
+          <div class="col-50">col-50</div>
+          <div class="col-50">col-50</div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <img src="https://placehold.co/600x400" alt="" />
+          </div>
+          <div class="col-25">
+            <h4>H4 Title</h4>
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Necessitatibus enim perspiciatis rerum. Dolore possimus qui
+                architecto, atque quis quia aspernatur nobis perferendis nihil?
+                Neque, architecto facilis odio labore aliquid possimus totam,
+                quisquam laboriosam, in soluta nemo perspiciatis doloribus
+                suscipit hic.
+              </p>
+            </div>
+          </div>
+          <div class="col-25">col-25</div>
+          <div class="col-25">col-25</div>
+        </div>
+
+        <div class="row">
+          <div class="col-33">col-33</div>
+          <div class="col-33">col-33</div>
+          <div class="col-33">col-33</div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="row">
+          <div class="col-100">footer: col-100</div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
