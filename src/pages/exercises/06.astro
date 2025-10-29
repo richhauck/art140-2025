@@ -4,13 +4,36 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title={title}>
-
-<p>Using the following <a href={ "/assets/charade.html" }>content</a>, you will design and build an interface promoting the 1963 film "Charade". As the designer, feel free to make revisions to the structure of the content. The final deliverable will be a single HTML page but will appear to be the homepage of a microsite.</p>
-<strong>Technical Requirements:</strong>
-<ul>
-  <li>Use <a href="https://getbootstrap.com">Bootstrap</a> or another framework</li>
-  <li>Needs to be responsive (use <a href="https://getbootstrap.com/docs/5.3/components/navbar/">Bootstrap's navbar</a>)</li>
-  <li>Implements a <a href="https://getbootstrap.com/docs/5.3/components/carousel/">carousel</a></li>
-</ul>
-<p>Any screen captures of the film are in the public domain, so consider using <a href="https://movie-screencaps.com/charade-1963/">screen caps</a> or searching on <a href="https://search.creativecommons.org/">Creative Commons Search</a>.</p>
+  <p>
+    Using the following <a
+      href={`${import.meta.env.BASE_URL}assets/charade.html`}>content</a
+    >, you will design and build an interface promoting the 1963 film "Charade".
+    As the designer, feel free to make revisions to the structure of the
+    content. The final deliverable will be a single HTML page but will appear to
+    be the homepage of a microsite.
+  </p>
+  <strong>Technical Requirements:</strong>
+  <ul>
+    <li>
+      Use <a href="https://getbootstrap.com">Bootstrap</a> or another framework
+    </li>
+    <li>
+      Needs to be responsive (use <a
+        href="https://getbootstrap.com/docs/5.3/components/navbar/"
+        >Bootstrap's navbar</a
+      >)
+    </li>
+    <li>
+      Implements a <a
+        href="https://getbootstrap.com/docs/5.3/components/carousel/"
+        >carousel</a>
+    </li>
+  </ul>
+  <p>
+    Any screen captures of the film are in the public domain, so consider using <a
+      href="https://movie-screencaps.com/charade-1963/">screen caps</a
+    > or searching on <a href="https://search.creativecommons.org/"
+      >Creative Commons Search</a
+    >.
+  </p>
 </Layout>
