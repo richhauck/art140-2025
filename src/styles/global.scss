@@ -159,7 +159,29 @@ svg.lucide {
     list-style: decimal;
   }
   ul {
+    margin: 0;
     list-style: square;
+  }
+  ul.columns {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
+  ul.columns li {
+    width: 48%;
+    padding-right: 2%;
+    @media (max-width: 767px) {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+  ul.columns::after {
+    content: "";
+    display: table;
+    clear: both;
   }
   li {
     padding: 0 0.5em;
@@ -212,4 +234,11 @@ aside {
   margin: 1em 0;
   padding: 1em;
   background-color: rgb(224, 238, 240);
+}
+.flex {
+  display: flex;
+  gap: 1em;
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
 }
