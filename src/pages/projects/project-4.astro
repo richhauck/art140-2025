@@ -8,7 +8,8 @@ import Layout from "../../layouts/Layout.astro";
   <p>
     For your final project, you will be creating a website for a small art
     museum. create a small business website for. You can use the content here: <a
-      href={"/assets/project-4-content.pdf"}>project-4-content.pdf</a
+      href=`${import.meta.env.BASE_URL}assets/project-4-content.pdf`
+      >project-4-content.pdf</a
     >. This project should exhibit the skills you have developed in this class.
   </p>
   <h2>Process:</h2>
@@ -23,15 +24,14 @@ import Layout from "../../layouts/Layout.astro";
   </ol>
   <strong>Design</strong>
   <ol>
+    <li>
+      Establish a brand--a logo, color palette (minimum 5 colors), and messaging
+    </li>
     <li>Create a sitemap in FigJam outlining the pages of your site</li>
     <li>Create a wireframe in Figma of your interface</li>
     <li>
       Photograph, illustrate, or find Creative Commons-licensed images to
       incorporate into your design.
-    </li>
-    <li>
-      Establish a brand color palette of at least 5 colors and use these in an
-      SVG logo
     </li>
     <li>Design your site in Figma responsively and link on D2L<br /></li>
   </ol>
@@ -74,9 +74,14 @@ import Layout from "../../layouts/Layout.astro";
       <td><p>20</p></td>
     </tr>
     <tr>
+      <td><p>Branding</p></td>
+      <td><p>11/19</p></td>
+      <td><p>20</p></td>
+    </tr>
+    <tr>
       <td><p>Visual Design</p></td>
       <td><p>11/24</p></td>
-      <td><p>80</p></td>
+      <td><p>60</p></td>
     </tr>
     <tr>
       <td><p>In-progress HTML template</p></td>
