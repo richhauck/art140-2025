@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      div {
+        border: 1px dashed black;
+      }
+
+      .feature {
+        display: flex;
+        gap: 20px;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .feature.reverse {
+        flex-direction: row-reverse;
+      }
+      .feature-image {
+        flex-basis: 300px;
+      }
+      .feature-description {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="feature">
+        <div class="feature-image">
+          <img src="https://picsum.photos/400/300" alt="" />
+        </div>
+        <div class="feature-description">
+          <h2>Feature</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+            voluptate.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature reverse">
+        <div class="feature-image">
+          <img src="https://picsum.photos/400/300" alt="" />
+        </div>
+        <div class="feature-description">
+          <h2>Feature</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+            voluptate.
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

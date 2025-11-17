@@ -3,4 +3,50 @@ const title = "Examples";
 import Layout from "../../layouts/Layout.astro";
 ---
 
-<Layout title={title} />
+<Layout title={title}>
+  <div>
+    <ul>
+      <li>
+        <a href={`${import.meta.env.BASE_URL}examples/cards`}>Cards</a>
+      </li>
+      <li>
+        <a href={`${import.meta.env.BASE_URL}examples/container/index.html`}
+          >Container
+        </a>
+      </li>
+      <li>
+        <a href={`${import.meta.env.BASE_URL}examples/hero/example.html`}
+          >Hero
+        </a>
+      </li>
+      <li>
+        <a
+          href={`${import.meta.env.BASE_URL}examples/link-borders/example.html`}
+          >Link Borders
+        </a>
+      </li>
+      <li>
+        <a
+          href={`${import.meta.env.BASE_URL}examples/link-highlight/index.html`}
+          >Link Highlight
+        </a>
+      </li>
+      <li>
+        <a href={`${import.meta.env.BASE_URL}examples/page-scroll/example.html`}
+          >Page Scroll
+        </a>
+      </li>
+      <li>
+        <a
+          href={`${import.meta.env.BASE_URL}examples/perfect-centering/example.html`}
+          >Perfect Centering
+        </a>
+      </li>
+      <li>
+        <a href={`${import.meta.env.BASE_URL}examples/thumbnail/example.html`}
+          >Thumbnail with Hover
+        </a>
+      </li>
+    </ul>
+  </div>
+</Layout>
