@@ -1,0 +1,326 @@
+---
+const title = "Component Libraries";
+import Layout from "../../layouts/Layout.astro";
+import {
+  Image,
+  SquareDashed,
+  Library,
+  Bot,
+  Palette,
+  PencilRuler,
+} from "@lucide/astro";
+---
+
+<Layout title={title}>
+  <p>
+    Below are a few examples of standalone components libraries that you might
+    reach for when a framework doesn't support your needs.
+  </p>
+  <p>When chosing one of these libraries, always consider:</p>
+  <ol>
+    <li>Is there a license?</li>
+    <li>Is there clear documentation with easy-to-recreate examples?</li>
+    <li>Is the library actively maintained?</li>
+  </ol>
+  <h2>Lightboxes</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          ><strong
+            ><a href="https://www.lightgalleryjs.com/">LightGallery</a></strong
+          ></td
+        >
+        <td
+          >Feature-rich, modular gallery supporting touch, zoom, thumbnails,
+          video, and plugins.</td
+        >
+      </tr>
+      <tr>
+        <td
+          ><strong><a href="https://photoswipe.com/">PhotoSwipe</a></strong></td
+        >
+        <td
+          >Responsive, mobile-first image gallery with smooth gestures and high
+          performance.</td
+        >
+      </tr>
+      <tr>
+        <td
+          ><strong><a href="https://fslightbox.com/">FsLightbox</a></strong></td
+        >
+        <td
+          >Lightweight, framework-agnostic lightbox for images and video with
+          simple API.</td
+        >
+      </tr>
+      <tr>
+        <td
+          ><strong
+            ><a href="https://micromodal.vercel.app/">MicroModal</a></strong
+          ></td
+        >
+        <td
+          >Very small, accessible modal library often used for dialog and
+          lightbox-style UI.</td
+        >
+      </tr>
+      <tr>
+        <td
+          ><strong
+            ><a href="https://feimosi.github.io/baguetteBox.js/"
+              >baguetteBox.js</a
+            ></strong
+          ></td
+        >
+        <td
+          >Simple, responsive image lightbox with captions and CSS-based
+          styling.</td
+        >
+      </tr>
+      <tr>
+        <td
+          ><strong
+            ><a href="https://lokeshdhakar.com/projects/lightbox2/">Lightbox2</a
+            ></strong
+          ></td
+        >
+        <td
+          >Classic, easy-to-use jQuery lightbox for images (simple gallery and
+          captions).</td
+        >
+      </tr>
+      <tr>
+        <td
+          ><strong
+            ><a href="https://fancyapps.com/fancybox/">Fancybox</a></strong
+          ></td
+        >
+        <td
+          >Versatile lightbox with rich media support, animations, gallery
+          features, and extensibility.</td
+        >
+      </tr>
+      <tr>
+        <td
+          ><strong
+            ><a href="https://biati-digital.github.io/glightbox/">GLightbox</a
+            ></strong
+          ></td
+        >
+        <td
+          >Pure JavaScript lightbox supporting images, video, HTML content,
+          touch, and accessibility.</td
+        >
+      </tr>
+    </tbody>
+  </table>
+
+  <hr />
+  <h2>Carousel/Slideshow</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          ><strong
+            ><a href="https://getbootstrap.com/docs/5.3/components/carousel/"
+              >Bootstrap</a
+            ></strong
+          ></td
+        >
+        <td>Component part of the Bootstrap framework</td>
+        <tr>
+          <td><strong><a href="https://swiperjs.com/">Swiper</a></strong></td>
+          <td
+            >Very modern, mobile-friendly touch slider with a ton of features
+            (lazy loading, virtual slides, effects, etc.).</td
+          >
+        </tr>
+        <tr>
+          <td><strong><a href="https://glidejs.com/">Glide.js</a></strong></td>
+          <td
+            >Dependency-free ES6 slider/carousel. Lightweight, modular, and
+            extendable.</td
+          >
+        </tr>
+        <tr>
+          <td><strong><a href="https://splidejs.com/">Splide</a></strong></td>
+          <td
+            >Lightweight, flexible, accessible slider written in TypeScript. No
+            external dependencies.</td
+          >
+        </tr>
+        <tr>
+          <td
+            ><strong
+              ><a href="https://flickity.metafizzy.co">Flickity</a></strong
+            ></td
+          >
+          <td
+            >Touch, responsive, “flickable” carousels with physics-based motion.</td
+          >
+        </tr>
+
+        <tr>
+          <td
+            ><strong><a href="https://keen-slider.io/">Keen-Slider</a></strong
+            ></td
+          >
+          <td>Modern touch slider with great performance and modular API.</td>
+        </tr>
+        <tr>
+          <td
+            ><strong
+              ><a href="https://www.embla-carousel.com/">Embla Carousel</a
+              ></strong
+            ></td
+          >
+          <td
+            >Very light, super smooth, great swipe precision, minimal footprint.</td
+          >
+        </tr>
+        <tr>
+          <td
+            ><strong
+              ><a href="https://kenwheeler.github.io/slick/">Slick</a></strong
+            ></td
+          >
+          <td>Classic jQuery-based carousel, very mature and feature-rich.</td>
+        </tr>
+        <tr>
+          <td
+            ><strong
+              ><a href="https://owlcarousel2.github.io/OwlCarousel2/"
+                >Owl Carousel 2</a
+              ></strong
+            ></td
+          >
+          <td
+            >Another widely used jQuery carousel; responsive and touch-enabled.</td
+          >
+        </tr>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr />
+  <h2>Parallax</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          ><strong
+            ><a href="https://beebom.com/best-parallax-scrolling-plugins/"
+              >ScrollMagic</a
+            ></strong
+          ></td
+        >
+        <td
+          >Very powerful for scroll-based interactions and animations. Supports
+          pinning, triggers, and complex scroll scenes.</td
+        >
+      </tr>
+      <tr>
+        <td
+          ><strong
+            ><a href="https://prinzhorn.github.io/skrollr/">skrollr</a></strong
+          ></td
+        >
+        <td
+          >Vanilla JS (no jQuery), data-attribute–based parallax animations.
+          Good for scrolling effects tied to CSS properties.</td
+        >
+      </tr>
+      <tr>
+        <td
+          ><strong
+            ><a href="https://github.com/dixonandmoe/rellax">Rellax</a></strong
+          ></td
+        >
+        <td
+          >Lightweight, performant, vanilla JS parallax library. Great for
+          simple depth effects.</td
+        >
+      </tr>
+      <tr>
+        <td
+          ><strong
+            ><a href="https://www.jsdelivr.com/package/npm/lax.js">lax.js</a
+            ></strong
+          ></td
+        >
+        <td
+          >Very small (~4 kb gzipped), enables smooth and “beautiful”
+          scroll-linked animations (parallax-like) via a simple API.</td
+        >
+      </tr>
+      <tr>
+        <td
+          ><strong
+            ><a href="https://basicscroll.electerious.com/">basicScroll</a
+            ></strong
+          ></td
+        >
+        <td
+          >Uses CSS variables + JS to drive parallax. No dependencies, optimized
+          for performance, works on mobile &amp; desktop.</td
+        >
+      </tr>
+      <tr>
+        <td
+          ><strong
+            ><a href="https://simpleparallax.com/">simpleParallax.js</a></strong
+          ></td
+        >
+        <td
+          >Focused on images (and videos) — applies parallax effect to <code
+            >&lt;img&gt;</code
+          > elements. Supports React and vanilla JS.</td
+        >
+      </tr>
+      <tr>
+        <td
+          ><strong
+            ><a href="https://matthew.wagerfield.com/parallax/">Parallax.js</a
+            ></strong
+          ></td
+        >
+        <td
+          >Uses device orientation (on mobile) or mouse movement (on desktop) to
+          create a parallax effect.</td
+        >
+      </tr>
+      <tr>
+        <td
+          ><strong
+            ><a href="https://markdalgleish.com/projects/stellar.js/"
+              >Stellar.js</a
+            ></strong
+          ></td
+        >
+        <td
+          >Older but still used: supports background and element parallax,
+          data-attributes-based, works with jQuery.</td
+        >
+      </tr>
+    </tbody>
+  </table>
+</Layout>
