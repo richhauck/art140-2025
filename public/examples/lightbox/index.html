@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lightbox basic demo</title>
+    <!-- Load the CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css"
+    />
+    <style>
+      /* Custom styles for the lightbox */
+      .lightbox .lb-image {
+        border: 5px dashed orange;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- "data-" attributes are read by the JavaScript -->
+    <a
+      href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg"
+      data-lightbox="gallery"
+      data-title="My first picture"
+    >
+      <img
+        src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg"
+        alt="Statue"
+        width="200"
+      />
+    </a>
+    <a
+      href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"
+      data-lightbox="gallery"
+      data-title="My second picture"
+    >
+      <img
+        src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"
+        alt="Statue"
+        width="200"
+      />
+    </a>
+    <!-- Load the JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox-plus-jquery.min.js"></script>
+    <!-- Optional options: https://lokeshdhakar.com/projects/lightbox2/#options -->
+    <script>
+      lightbox.option({
+        resizeDuration: 200,
+        wrapAround: true,
+      });
+    </script>
+  </body>
+</html>
