@@ -1,0 +1,28 @@
+---
+const title = "Alternating Feature";
+import Layout from "../../../layouts/Layout.astro";
+import { Code } from "astro:components";
+---
+
+<Layout title={title}>
+  <iframe
+    src={`${import.meta.env.BASE_URL}ui-examples/feature/example.html`}
+    style="width:100%; height: 300px;"></iframe>
+  <a
+    class="button"
+    href={`${import.meta.env.BASE_URL}ui-examples/feature/example.html`}
+    >View Example</a
+  >
+  <p>
+    When you want to reverse a column layout, try using a flex box with the <code
+      >flex-direction</code
+    > property rather than writing new markup.
+  </p>
+  <Code
+    code={`.feature.reverse {
+  flex-direction: row-reverse;
+}
+`}
+    lang="css"
+  />
+</Layout>

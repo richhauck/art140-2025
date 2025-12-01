@@ -1,0 +1,156 @@
+---
+const title = "Examples";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title={title}>
+  <p>Below are examples for commonly-requested UI layouts.</p>
+  <div class="cards">
+    <div class="card">
+      <a href={`${import.meta.env.BASE_URL}ui-examples/cards`}
+        ><img
+          src={`${import.meta.env.BASE_URL}ui-examples/cards.avif`}
+          alt="Cards"
+        /></a
+      >
+      <h3>
+        <a href={`${import.meta.env.BASE_URL}ui-examples/cards`}>Cards</a>
+      </h3>
+      <p>A common UI component containing a title and image</p>
+    </div>
+    <div class="card">
+      <a href={`${import.meta.env.BASE_URL}ui-examples/container/`}
+        ><img
+          src={`${import.meta.env.BASE_URL}ui-examples/container.avif`}
+          alt="Container"
+        /></a
+      >
+      <h3>
+        <a href={`${import.meta.env.BASE_URL}ui-examples/container/`}
+          >Container
+        </a>
+      </h3>
+      <p>A fundamental convention for consistent page layouts</p>
+    </div>
+    <div class="card">
+      <a href={`${import.meta.env.BASE_URL}ui-examples/hero/`}
+        ><img
+          src={`${import.meta.env.BASE_URL}ui-examples/hero.avif`}
+          alt="Hero"
+        /></a
+      >
+      <h3><a href={`${import.meta.env.BASE_URL}ui-examples/hero/`}>Hero</a></h3>
+      <p>The primary CTA on a page</p>
+    </div>
+    <div class="card">
+      <a href={`${import.meta.env.BASE_URL}ui-examples/nav-with-logo/`}
+        ><img
+          src={`${import.meta.env.BASE_URL}ui-examples/navigation-with-logo.avif`}
+          alt="Navigation with logo"
+        /></a
+      >
+      <h3>
+        <a href={`${import.meta.env.BASE_URL}ui-examples/nav-with-logo/`}
+          >Navigation with Logo
+        </a>
+      </h3>
+      <p>A example of a responsive navigation with a logo</p>
+    </div>
+    <div class="card">
+      <a href={`${import.meta.env.BASE_URL}ui-examples/link-borders/`}
+        ><img
+          src={`${import.meta.env.BASE_URL}ui-examples/link-borders.avif`}
+          alt="Link Borders"
+        /></a
+      >
+      <h3>
+        <a href={`${import.meta.env.BASE_URL}ui-examples/link-borders/`}
+          >Link Borders
+        </a>
+      </h3>
+      <p>Applying borders between navigation links</p>
+    </div>
+    <div class="card">
+      <a href={`${import.meta.env.BASE_URL}ui-examples/lightbox/`}
+        ><img
+          src={`${import.meta.env.BASE_URL}ui-examples/lightbox.avif`}
+          alt="Lightbox"
+        /></a
+      >
+      <h3>
+        <a href={`${import.meta.env.BASE_URL}ui-examples/lightbox/`}
+          >Lightbox
+        </a>
+      </h3>
+      <p>Working examples of popular lightbox libraries</p>
+    </div>
+    <div class="card">
+      <a href={`${import.meta.env.BASE_URL}ui-examples/link-highlight/`}
+        ><img
+          src={`${import.meta.env.BASE_URL}ui-examples/link-highlight.avif`}
+          alt="Link Highlight"
+        /></a
+      >
+      <h3>
+        <a href={`${import.meta.env.BASE_URL}ui-examples/link-highlight/`}
+          >Link Highlight
+        </a>
+      </h3>
+      <p>Highlight the current page in your nav</p>
+    </div>
+    <div class="card">
+      <a href={`${import.meta.env.BASE_URL}ui-examples/page-scroll/`}
+        ><img
+          src={`${import.meta.env.BASE_URL}ui-examples/page-scroll.avif`}
+          alt="Page Scroll"
+        /></a
+      >
+      <h3>
+        <a href={`${import.meta.env.BASE_URL}ui-examples/page-scroll/`}
+          >Page Scroll
+        </a>
+      </h3>
+      <p>Scroll within the page</p>
+    </div>
+    <div class="card">
+      <a href={`${import.meta.env.BASE_URL}ui-examples/perfect-centering/`}
+        ><img
+          src={`${import.meta.env.BASE_URL}ui-examples/perfect-centering.avif`}
+          alt="Perfect Centering"
+        /></a
+      >
+      <h3>
+        <a href={`${import.meta.env.BASE_URL}ui-examples/perfect-centering/`}
+          >Perfect Centering
+        </a>
+      </h3>
+      <p>Perfect centering within a container.</p>
+    </div>
+    <div class="card">
+      <a href={`${import.meta.env.BASE_URL}ui-examples/feature/`}
+        ><img
+          src={`${import.meta.env.BASE_URL}ui-examples/feature.avif`}
+          alt="Feature"
+        /></a
+      >
+      <h3>
+        <a href={`${import.meta.env.BASE_URL}ui-examples/feature/`}>Feature </a>
+      </h3>
+      <p>Alternating layout.</p>
+    </div>
+    <div class="card">
+      <a href={`${import.meta.env.BASE_URL}ui-examples/thumbnail/`}
+        ><img
+          src={`${import.meta.env.BASE_URL}ui-examples/thumbnail.avif`}
+          alt="Thumbnail with Hover"
+        /></a
+      >
+      <h3>
+        <a href={`${import.meta.env.BASE_URL}ui-examples/thumbnail/`}
+          >Thumbnail with Hover
+        </a>
+      </h3>
+      <p>Display text over an image</p>
+    </div>
+  </div>
+</Layout>

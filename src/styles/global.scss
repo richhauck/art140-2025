@@ -128,11 +128,25 @@ th li {
 .cards {
   display: flex;
   flex-wrap: wrap;
+  gap: var(--basePadding);
 }
 .cards > section {
   padding: var(--basePadding);
   width: 50%;
 }
+
+.card {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 260px;
+  height: 300px;
+}
+.card p {
+  margin: 0;
+}
+.card h3 {
+  margin: 0 0 0.5rem 0;
+}
+
 svg.lucide {
   stroke: var(--iconStroke);
   vertical-align: middle;

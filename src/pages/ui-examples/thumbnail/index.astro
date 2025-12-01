@@ -1,0 +1,37 @@
+---
+const title = "Thumbnail with Hover";
+import Layout from "../../../layouts/Layout.astro";
+---
+
+<Layout title={title}>
+  <p>
+    To achieve this effect, you'll use absolute positioning to place both the
+    image and the overlay. Then, you'll apply a <code>:hover</code> on the overlay
+    to trigger the display of the overlay.
+  </p>
+  <p
+    class="codepen"
+    data-height="400"
+    data-default-tab="html,result"
+    data-slug-hash="emZKvmY"
+    data-pen-title="Thumbnail with hover state"
+    data-user="richhauck"
+    style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+  >
+    <span
+      >See the Pen <a href="https://codepen.io/richhauck/pen/emZKvmY">
+        Thumbnail with hover state</a
+      > by Rich Hauck (<a href="https://codepen.io/richhauck">@richhauck</a>) on <a
+        href="https://codepen.io">CodePen</a
+      >.</span
+    >
+  </p>
+  <script async src="https://public.codepenassets.com/embed/index.js"></script>
+  <p>
+    <a
+      class="button"
+      href={`${import.meta.env.BASE_URL}ui-examples/container/example.html`}
+      >View Example</a
+    >
+  </p>
+</Layout>

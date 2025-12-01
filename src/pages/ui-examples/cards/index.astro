@@ -1,0 +1,77 @@
+---
+const title = "Cards";
+import Layout from "../../../layouts/Layout.astro";
+import { Code } from "astro:components";
+---
+
+<Layout title={title}>
+  <p>
+    Cards are common user interface components used in web design. While they
+    aren't created with HTML-specific tags, they commonly contain a title,
+    image, and description.
+  </p>
+
+  <iframe
+    src={`${import.meta.env.BASE_URL}ui-examples/cards/card-structure.html`}
+    style="width:100%; height: 500px;"></iframe>
+
+  <Code
+    code={`<div class="card">
+  <div class="title">
+    <a href="#"><h3>Card Title</h3></a>
+  </div>
+  <div class="img-holder">
+    <img src="https://placehold.co/260x200" alt="" />
+  </div>
+  <div class="card-content">
+    <p>Description goes here.</p>
+  </div>
+  <div class="link"><a href="#">View Site</a></div>
+</div>
+`}
+    lang="html"
+  />
+  <p>
+    With this example, a height is assigned to <code>.card_content</code> to ensure
+    the bottom link aligns with other cards.
+  </p>
+  <Code
+    code={`.card {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 260px;
+  height: 400px;
+  border-radius: 10px;
+  padding: 20px;
+}
+.card-content {
+  height: 130px;
+}
+.card h3 {
+  margin-top: 0;
+}
+`}
+    lang="css"
+  />
+  <a
+    class="button"
+    href={`${import.meta.env.BASE_URL}ui-examples/cards/card-structure.html`}
+    >View Example</a
+  >
+  <hr />
+  <h2>A container for cards</h2>
+  <iframe
+    src={`${import.meta.env.BASE_URL}ui-examples/cards/card-holder.html`}
+    style="width:100%; height: 500px;"></iframe>
+
+  <p>
+    Often, you'll want multiple cards displayed at once, in which case it's good
+    practice to define a container for your cards. You can then use the
+    container to dictate the number of cards displaying per row by setting a max
+    width and/or incorporating media queries.
+  </p>
+  <a
+    class="button"
+    href={`${import.meta.env.BASE_URL}ui-examples/cards/card-holder.html`}
+    >View Example</a
+  >
+</Layout>

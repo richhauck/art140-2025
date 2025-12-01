@@ -1,0 +1,22 @@
+---
+const title = "Lightbox Example";
+import Layout from "../../../layouts/Layout.astro";
+---
+
+<Layout title={title}>
+  <p>
+    Here's two examples using popular lightbox libraries (<a
+      href="https://lokeshdhakar.com/projects/lightbox2/">Lightbox 2</a
+    > and <a href="https://photoswipe.com/">PhotoSwipe</a>).
+  </p>
+  <a
+    class="button"
+    href={`${import.meta.env.BASE_URL}ui-examples/lightbox/index.html`}
+    >View Lightbox v2</a
+  >
+  <a
+    class="button"
+    href={`${import.meta.env.BASE_URL}ui-examples/photoswipe/index.html`}
+    >PhotoSwipe example</a
+  >
+</Layout>

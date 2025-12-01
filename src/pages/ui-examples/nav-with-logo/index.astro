@@ -1,0 +1,19 @@
+---
+const title = "Navigation with Logo";
+import Layout from "../../../layouts/Layout.astro";
+---
+
+<Layout title={title}>
+  <p>
+    This builds off of the <a
+      href=`${import.meta.env.BASE_URL}tutorials/responsive-navigation/`
+      >Responsive Navigation</a
+    > tutorial by adding a logo to the left side of the navigation bar. At mobile,
+    the logo stacks on top of the navigation.
+  </p>
+  <a
+    class="button"
+    href={`${import.meta.env.BASE_URL}ui-examples/nav-with-logo/example.html`}
+    >View Example</a
+  >
+</Layout>
