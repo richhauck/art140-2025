@@ -2,8 +2,9 @@
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.scss";
+import "../styles/grid.css";
 import "../styles/hamburger.css";
-const { title } = Astro.props;
+const { title, fullWidth } = Astro.props;
 ---
 
 <!doctype html>
@@ -62,7 +63,7 @@ const { title } = Astro.props;
     <main id="main">
       <Navigation />
       <div id="content">
-        <div id="inner-content">
+        <div id={fullWidth ? "inner-fullwidth" : "inner-content"}>
           <h1>{title}</h1>
           <slot />
         </div>
@@ -175,6 +176,10 @@ const { title } = Astro.props;
   #inner-content {
     padding: 1em;
     width: 65%;
+    background-color: var(--primary);
+  }
+  #inner-fullwidth {
+    padding: 1em;
     background-color: var(--primary);
   }
   @media (max-width: 1024px) {
